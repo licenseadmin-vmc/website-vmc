@@ -14,7 +14,7 @@ const routes = [
   {
     exact: true,
     path: "/",
-    component: Home,
+    component: Enter,
   },
   {
     exact: true,
