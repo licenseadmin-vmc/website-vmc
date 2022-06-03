@@ -1,0 +1,79 @@
+html {
+  padding: 0 48px;
+  margin: 0;
+  background-color: $color-white;
+  background-size: 12px 12px;
+  font-family: $font-alt;
+  overflow-x: hidden;
+  background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
+
+  // RETINA
+  @media (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
+  }
+
+}
+
+
+
+html,
+body {
+  height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+
+.flex-container {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  width: auto;
+}
+
+.flex-item {
+  text-align: center;
+  height: 200px;
+}
+
+
+
+.nudge {
+  &-xxs {
+    margin-bottom: 3px;
+  }
+
+  &-xs {
+    margin-bottom: 6px;
+  }
+
+  &-sm {
+    margin-bottom: 16px;
+  }
+
+  &-md {
+    margin-bottom: 24px;
+  }
+
+  &-lg {
+    margin-bottom: 35px;
+  }
+
+  &-xl {
+    margin-bottom: 65px;
+  }
+
+  &-xxl {
+    margin-bottom: 120px;
+  }
+}

@@ -1,0 +1,57 @@
+p {
+  color: $color-white-default;
+  font-size: $type-xxs;
+  font-weight: $light;
+  line-height: $type-xl;
+  padding: 12px;
+}
+
+h1 {
+  font-weight: $light;
+  color: $color-alt-default;
+  margin: 0;
+  padding: 0;
+  line-height: auto;
+  align-items: center;
+  display: flex;
+  font-size: $type-h1;
+
+}
+
+h2 {
+  font-weight: $default;
+  color: $color-alt-default;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  font-size: $type-h2;
+  justify-content: center;
+
+  b {
+    font-weight: $regular;
+  }
+  
+}
+
+h3 {
+  color: $color-alt-default;
+  padding: 0;
+  margin: 0;
+  font-weight: $default;
+  font-size: $type-h3;
+}
+
+h4 {
+  color: $color-alt-default;
+  padding: 0;
+  margin: 0;
+  font-weight: $default;
+  font-size: $type-h4;
+  text-align: right;
+
+  strong {
+    font-weight: $bold;
+    color: $color-alt-default;
+  }
+}
+

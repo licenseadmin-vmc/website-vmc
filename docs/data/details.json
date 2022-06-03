@@ -1,0 +1,38 @@
+[
+  {
+    "city": "vancouver",
+    "country": "ca",
+    "timezone": "America/Los_Angeles",
+    "key": "V"
+  },
+  {
+    "city": "tokyo",
+    "country": "jp",
+    "timezone": "Asia/Tokyo",
+    "key": "T"
+  },
+  {
+    "city": "hawaii",
+    "country": "us",
+    "timezone": "Pacific/Honolulu",
+    "key": "H"
+  },
+  {
+    "city": "kiev",
+    "country": "ua",
+    "timezone": "Europe/Kiev",
+    "key": "K"
+  },
+  {
+    "city": "lagos",
+    "country": "ng",
+    "timezone": "Africa/Lagos",
+    "key": "L"
+  },
+  {
+    "city": null,
+    "country": "",
+    "command": "reset",
+    "key": "R"
+  }
+]

@@ -1,0 +1,5 @@
+app/node_modules/
+.vscode/
+.DS_Store
+docs/.DS_Store
+*.js.LICENSE.txt

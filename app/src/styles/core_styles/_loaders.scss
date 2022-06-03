@@ -1,0 +1,124 @@
+.fetching,
+.fetching:after {
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  color: $color-gray-darkest;
+  // margin: 6px 0;
+
+  &-user {
+    color: $color-white;
+  }
+}
+
+.fetching {
+  align-items: center;
+  color: $color-gray-darkest;
+  border-top: 1px solid $color-white-slight;
+  border-right: 1px solid $color-white;
+  border-bottom: 1px solid $color-white-slight;
+  border-left: 1px solid $color-white-slight;
+  animation: fetch 2s infinite ease;
+  font-size: $type-note;
+
+  &-alert {
+    @extend .fetching;
+    border-right: 1px solid $color-pink;
+  }
+
+  &-user {
+    @extend .fetching;
+    color: $color-white;
+    border-top: 1px solid $color-white-light;
+    border-right: 1px solid $color-white;
+    border-bottom: 1px solid $color-white-light;
+    border-left: 1px solid $color-white-light;
+  }
+
+  &-alt {
+    @extend .fetching;
+    margin: 25vh auto;
+    position: relative;
+    border-top: 1px solid $color-white-slight;
+    border-right: 1px solid $color-white;
+    border-bottom: 1px solid $color-white-slight;
+    border-left: 1px solid $color-white-slight;
+    animation: fetch 1s infinite linear;
+  }
+}
+
+@keyframes fetch {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(-360deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+  }
+}
+
+.reload,
+.reload:after {
+  border-radius: 50%;
+  width: 6px;
+  height: 6px;
+  color: $color-gray-darkest;
+}
+
+.reload {
+  color: $color-gray-darkest;
+  border-top: 1px solid $color-white-slight;
+  border-right: 1px solid $color-white;
+  border-bottom: 1px solid $color-white-slight;
+  border-left: 1px solid $color-white-slight;
+  animation: loader 1s infinite linear;
+  display: inline-flex;
+}
+
+.reload-fast {
+  @extend .reload;
+  border-top: 1px solid $color-white-slight;
+  border-right: 1px solid $color-white-medium;
+  border-bottom: 1px solid $color-white-slight;
+  border-left: 1px solid $color-white-slight;
+  animation: loader .3s infinite linear;
+}
+
+.load,
+.load:after {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+.load {
+  margin: 25vh auto;
+  position: relative;
+  border-top: 2px solid $color-white-slight;
+  border-right: 2px solid $color-white-slight;
+  border-bottom: 2px solid $color-white-slight;
+  border-left: 2px solid $color-white;
+  animation: loader 1s infinite linear;
+
+  &-message {
+    @extend .load;
+    margin: 42vh auto;
+    animation: pulse 0.7s infinite linear;
+    border: none;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: $type-default;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

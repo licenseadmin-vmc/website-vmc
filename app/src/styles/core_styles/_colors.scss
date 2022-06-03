@@ -1,0 +1,119 @@
+
+
+$color-white: #fff;
+$color-white-light: rgba(255, 255, 255, 0.3);
+$color-white-half: rgba(255, 255, 255, 0.5);
+$color-white-medium: rgba(255, 255, 255, 0.75);
+$color-white-default: rgba(255, 255, 255, 0.9);
+$color-white-slight: rgba(255, 255, 255, 0.1);
+$color-white-note: rgba(255, 255, 255, 0.06);
+$color-white-hint: rgba(255, 255, 255, 0.03);
+$color-white-element: rgba(255, 255, 255, 0.04);
+
+$color-red: rgba(231, 80, 82,1); 
+$color-red-default: rgba(231, 80, 82, 0.85); 
+$color-red-medium: rgba(231, 80, 82, 0.75); 
+$color-red-half: rgba(231, 80, 82, 0.5); 
+$color-red-light: rgba(231, 80, 82, 0.3); 
+$color-red-slight: rgba(231, 80, 82, 0.15); 
+$color-red-note: rgba(231, 80, 82, 0.06); 
+
+$color-pink: rgba(255, 113, 138, 1); // #ff718a *
+$color-pink-default: rgba(255, 113, 138, 0.9);
+$color-pink-medium: rgba(255, 113, 138, 0.75);
+$color-pink-half: rgba(255, 113, 138, 0.5);
+$color-pink-light: rgba(255, 113, 138, 0.3);
+$color-pink-slight: rgba(255, 113, 138, 0.1);
+$color-pink-note: rgba(255, 113, 138, 0.06);
+$color-pink-hint: rgba(255, 113, 138, 0.03);
+
+$color-orange: rgba(255, 174, 80, 1);  // ffae50
+$color-orange-default: rgba(255, 174, 80, 0.9);
+$color-orange-medium: rgba(255, 174, 80, 0.75);
+$color-orange-half: rgba(255, 174, 80, 0.5);
+$color-orange-light: rgba(255, 174, 80, 0.3);
+$color-orange-slight: rgba(255, 174, 80, 0.15);
+$color-orange-note: rgba(255, 174, 80, 0.06);
+$color-orange-hint: rgba(255, 174, 80, 0.03);
+
+
+
+$color-yellow: rgba(249, 248, 113, 1); 
+$color-yellow-default: rgba(249, 248, 113, 0.85); 
+$color-yellow-medium: rgba(249, 248, 113, 0.75); 
+$color-yellow-half: rgba(249, 248, 113, 0.5); 
+$color-yellow-light: rgba(249, 248, 113, 0.3);
+$color-yellow-slight: rgba(249, 248, 113, 0.15); 
+$color-yellow-note: rgba(249, 248, 113, 0.06); 
+$color-yellow-solid: rgba(249, 248, 113,1); 
+
+$color-mid: rgba(116, 243, 255,1);  // #74f3ff
+$color-mid-default: rgba(116, 243, 255, 0.9); 
+$color-mid-medium: rgba(116, 243, 255, 0.75); 
+$color-mid-half: rgba(116, 243, 255, 0.5); 
+$color-mid-light: rgba(116, 243, 255, 0.3); 
+$color-mid-slight: rgba(116, 243, 255, 0.15); 
+$color-mid-note: rgba(116, 243, 255, 0.03); 
+$color-mid-hint: rgba(116, 243, 255, 0.01); 
+
+$color-green: rgba(0, 224, 211, 1); 
+$color-green-default: rgba(0, 224, 211,.85); 
+$color-green-medium: rgba(0, 224, 211,.75); 
+$color-green-half: rgba(0, 224, 211,.5); 
+$color-green-light: rgba(0, 224, 211,.3); 
+$color-green-slight: rgba(0, 224, 211,.15); 
+$color-green-note: rgba(0, 224, 211,.03); 
+$color-green-hint: rgba(0, 224, 211,.01); 
+
+
+$color-brand: rgba(136, 196 ,229, 1); // 50b8e7 *
+$color-brand-default: rgba(136, 196 ,229, 0.9); 
+$color-brand-medium: rgba(136, 196 ,229, 0.75); 
+$color-brand-half: rgba(136, 196 ,229, 0.5); 
+$color-brand-light: rgba(136, 196 ,229, 0.3); 
+$color-brand-slight: rgba(136, 196 ,229, 0.12); 
+$color-brand-note: rgba(136, 196 ,229, 0.06); 
+$color-brand-hint: rgba(136, 196 ,229, 0.03); 
+
+$color-alt: rgba(235, 88, 81, 1); // 50b8e7 *
+$color-alt-default: rgba(235, 88, 81, 0.9); 
+$color-alt-medium: rgba(235, 88, 81, 0.75); 
+$color-alt-half: rgba(235, 88, 81, 0.5); 
+$color-alt-light: rgba(235, 88, 81, 0.3); 
+$color-alt-slight: rgba(235, 88, 81, 0.12); 
+$color-alt-note: rgba(235, 88, 81, 0.06); 
+$color-alt-hint: rgba(235, 88, 81, 0.03); 
+
+
+$color-blue: rgba(56, 127, 161, 1);  // 0083af
+$color-blue-default: rgba(56, 127, 161, 0.85); 
+$color-blue-medium: rgba(56, 127, 161, 0.75); 
+$color-blue-half: rgba(56, 127, 161, 0.5); 
+$color-blue-light: rgba(56, 127, 161, 0.3); 
+$color-blue-slight: rgba(56, 127, 161, 0.15); 
+$color-blue-note: rgba(56, 127, 161, 0.06); 
+$color-blue-hover: rgba(56, 127, 161, 0.1);
+
+$color-gray: #F4F6F8; 
+$color-gray-note: rgba(0, 13, 33, 0.06);
+$color-gray-slight: rgba(0, 13, 33, 0.15);
+$color-gray-light: rgba(0, 13, 33, 0.3);
+$color-gray-half: rgba(0, 13, 33, 0.5);
+$color-gray-medium: rgba(0, 13, 33, .65);
+$color-gray-dark: rgba(0, 13, 33,.75);
+$color-gray-darker: rgba(0, 13, 33,.85);
+$color-gray-default: rgba(0, 13, 33,.95);
+$color-gray-darkest: rgba(0, 13, 33,1.0);
+
+
+$color-black: rgba(0, 0, 0, 1.0);
+$color-black-hint: rgba(0, 0, 0, .1);
+
+$color-background: $color-white;
+
+$color-indicator: $color-orange-default;
+$color-nav: $color-gray-darkest;
+
+$color-crosshairs: $color-orange-default;
+
+

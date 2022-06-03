@@ -1,0 +1,116 @@
+.__react_component_tooltip {
+  &.type-dark {
+    background-color: transparent;
+    opacity: 1;
+    color: $color-white-default;
+    max-width: 300px;
+    line-height: $type-default !important;
+    font-size: $type-default !important;
+    text-align: center !important;
+    border-radius: $radius-default !important;
+    z-index: $z-ultimate !important;
+    font-weight: $regular !important;
+    padding: 0 6px !important;
+    font-size: $type-tiny !important;
+    display: inline-flex;
+
+    &:after {
+      opacity: 0;
+    }
+
+    i {
+      color: $color-white;
+      margin: 0 3px;
+      font-size: $type-sm;
+    }
+  }
+  &.type-light {
+    background-color: $color-white;
+    opacity: 1;
+    color: $color-gray-darkest;
+    text-transform: uppercase;
+    max-width: 150px !important;
+    width: 150px !important;
+    line-height: $type-default !important;
+    text-align: center !important;
+    border-radius: $radius-slight !important;
+    z-index: $z-ultimate !important;
+    font-weight: $regular !important;
+    padding: 6px !important;
+    font-size: $type-tiny !important;
+    display: inline-flex;
+
+    &:after .right {
+      opacity: 1;
+      border-right-color: $color-white !important; 
+    }
+
+    &:after .top {
+      opacity: 1;
+      border-bottom-color: $color-white !important; 
+    }
+
+ 
+  }
+}
+
+
+
+.indicate {
+  position: relative;
+  display: inline;
+  font-size: $type-xs;
+  font-weight: $bold;
+
+  span {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    color: $color-white;
+    background: $color-white-slight;
+    text-align: center;
+    font-size: $type-xxs;
+    bottom: 42px;
+    right: -10px;
+    z-index: 999;
+    border-radius: $radius-slight;
+    padding: 3px 6px;
+    font-size: $type-default;
+    transform: scale(1);
+    transition: $transition-scale;
+
+    &:before {
+      color: $color-white;
+      content: "\3f";
+    }
+
+    &:hover {
+      transform: scale(1.5);
+      transform-origin: bottom center;
+      transition: $transition-scale;
+      background: $color-white;
+
+      &:after {
+        border-top: 3px solid $color-white;
+      }
+
+      &:before {
+        color: $color-black;
+        content: "\f714";
+      }
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 9px;
+      width: 0;
+      height: 0;
+      border-top: 3px solid $color-white-slight;
+      border-right: 3px solid transparent;
+      border-left: 3px solid transparent;
+    }
+  }
+}
