@@ -1,20 +1,22 @@
 p {
-  color: $color-white-default;
-  font-size: $type-xxs;
-  font-weight: $light;
+  color: $color-gray-darkest;
+  font-size: $type-sm;
+  font-weight: $default;
   line-height: $type-xl;
-  padding: 12px;
+
 }
 
 h1 {
-  font-weight: $light;
+  font-weight: $default;
   color: $color-alt-default;
   margin: 0;
   padding: 0;
   line-height: auto;
-  align-items: center;
-  display: flex;
   font-size: $type-h1;
+
+  strong {
+    font-weight: $regular;
+  }
 
 }
 
@@ -23,11 +25,10 @@ h2 {
   color: $color-alt-default;
   margin: 0;
   padding: 0;
-  display: flex;
   font-size: $type-h2;
   justify-content: center;
 
-  b {
+  strong {
     font-weight: $regular;
   }
   

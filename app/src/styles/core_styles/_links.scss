@@ -21,27 +21,19 @@ a {
 
   }
 
-  // @media (min-width: $break-sm) {
-  //   font-size: $type-default;
-  // }
-  // @media (min-width: $break-md) {
-  //   font-size: $type-default;
-  // }
-  // @media (min-width: $break-lg) {
-  //   font-size: $type-default;
-  // }
-  // @media (min-width: $break-xl) {
-  //   font-size: $type-xxs;
-  // }
-  // @media (min-width: $break-FHD) {
-  //   font-size: $type-sm;
-  // }
-  // @media (min-width: $break-WQHD) {
-  //   font-size: $type-md;
-  // }
-  // @media (min-width: $break-UHD) {
-  //   font-size: $type-lg;
-  // }
+  &-lg {
+    color: $color-alt-default;
+    margin: 0;
+    padding: 0;
+    font-size: $type-h3;
+    text-decoration: underline;
+    text-transform: none;
+    font-weight: $regular;
+
+    &:hover {
+      color: $color-alt;
+    }
+  }
 
   &-socket {
     text-decoration: none;

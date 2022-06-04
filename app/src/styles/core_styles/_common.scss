@@ -26,24 +26,181 @@ body {
   user-select: none;
 }
 
+.quadrant {
+  position: absolute;
+  color: $color-gray-darkest;
+  display: flex;
+  flex-direction: column;
+  padding: 72px;
+
+  div {
+    min-width: 475px;
+  }
+
+  a {
+    border-radius: $radius-round;
+    border: 1px solid $color-alt;
+    color: $color-alt;
+    font-weight: $regular;
+    padding: 6px 24px;
+    font-size: $type-xxs;
+
+    &:hover {
+      background: $color-alt-default;
+      color: $color-white;
+    }
+
+  }
+
+  #selected {
+      border-radius: $radius-round;
+      border: 1px solid $color-alt;
+      color: $color-white;
+      font-weight: $regular;
+      padding: 6px 24px;
+      font-size: $type-xxs;
+      background: $color-alt-default;
+      
+      &:hover {
+        background: $color-alt;
+        color: $color-white;
+      }
+  
+  }
+
+  &-1 {
+    @extend .quadrant;
+    left: 0;
+    right: 50%;
+    top: 0;
+    bottom: 50%;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-2 {
+    @extend .quadrant;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 50%;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  &-3 {
+    @extend .quadrant;
+    left: 0;
+    right: 50%;
+    top: 50%;
+    bottom: 0;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-4 {
+    @extend .quadrant;
+    left: 50%;
+    right: 0;
+    top: 50%;
+    bottom: 0;
+    text-align: right;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.follow {
+  display: flex;
+  position: absolute;
+  top: calc(50% + 60px);
+  left: 10%;
+  right: 10%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  @media (min-width: $break-sm) {
+    left: 20%;
+    right: 20%;
+  }
+
+
+}
 
 
 .flex-container {
-  height: 100%;
+  width: 100%;
   padding: 0;
   margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &-lineY {
+    animation: delayGrowY;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: inherit;
+    animation-delay: 5.8s;
+    height: 0;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    border-left: 1px solid $color-gray-slight;
+    transform: translate(-50%);
+  }
+
+  &-lineX {
+    animation: delayGrowX;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: inherit;
+    animation-delay: 6s;
+    width: 0;
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid $color-gray-slight;
+  }
+
+
 }
 
 .row {
-  width: auto;
+  width: 100%;
 }
 
 .flex-item {
   text-align: center;
-  height: 200px;
+  height: auto;
+  justify-content: center;
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
 
 
