@@ -110,7 +110,7 @@ function Enter() {
                     <div>
                       <h1>{content[2].title}</h1>
                       <p dangerouslySetInnerHTML={{ __html: content[2].abstract }} />
-                      <a onClick={() => handleQuadrant(1)}>{content[2].buttonCTA}</a>
+                      <a onClick={() => handleQuadrant(2)}>{content[2].buttonCTA}</a>
                     </div>
                   </div>
                 }
@@ -164,8 +164,6 @@ function Enter() {
               <div className="follow">
                 {selectedQuadrant == 0 &&
                   <>
-
-
                     <Typewriter
                       options={{
                         autoStart: true,
@@ -191,34 +189,8 @@ function Enter() {
                           .start();
                       }}
                     />
-
                   </>
-
                 }
-                {/* <Typewriter
-                  options={{
-                    autoStart: true,
-                    loop: false,
-                    cursor: "",
-                    delay: 12,
-                  }}
-                  onInit={(typewriter) => {
-                    typewriter
-                      .pauseFor(200)
-                      .typeString("<h1>" + content[0].title + "</h1>")
-                      .pauseFor(400)
-                      .typeString("<h4>" + content[0].poweredBy + "</h4>")
-                      .pauseFor(1000)
-                      .deleteAll(1)
-                      .pasteString("<h4>" + content[0].line1 + "</h4>")
-                      .pauseFor(750)
-                      .pasteString("<div class='nudge-md'></div>")
-                      .pasteString("<h2 class='pulse-turbo'><strong>VitroMetrics has your complete solution.</strong></h2>")
-                      .pauseFor(1700)
-                      .deleteAll(1)
-                      .start();
-                  }}
-                /> */}
 
               </div>
 
@@ -228,7 +200,7 @@ function Enter() {
 
               <div className={`flex-item-q` + selectedQuadrant}>
 
-                <img onClick={() => handleQuadrant(0)} src='img/logo-vm.png' height='72' /> <div className='nudge-md'></div>
+                <img className="zoom-out" onClick={() => handleQuadrant(0)} src='img/logo-vm.png' height='72' /> <div className='nudge-md'></div>
 
               </div>
 

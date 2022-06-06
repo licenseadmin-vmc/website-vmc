@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { useContext } from "../../contexts";
 
 const REACT_VERSION = React.version;
 
 function Footer() {
-  const oasysCtxt = useContext();
 
 
   useEffect(() => {

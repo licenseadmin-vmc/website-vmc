@@ -15,15 +15,10 @@ html {
 
 }
 
-.img-jump {
-  // animation-name: pulse;
-  // animation-duration: 0.1s;
-  // animation-timing-function: linear;
-  // animation-direction: normal;
-  // animation-iteration-count: 2;
-  // animation-play-state: inherit;
-}
+.inert {
+  cursor: default;
 
+}
 
 html,
 body {
@@ -40,13 +35,6 @@ body {
   display: flex;
   flex-direction: column;
   padding: 72px;
-
- 
-
-  // div {
-  //   min-width: 475px;
-  //   width: 100%;
-  // }
 
   a {
     border-radius: $radius-round;
@@ -153,7 +141,7 @@ body {
 
     position: absolute;
     // transform: translate(-50%);
-    transition: all .3s ease;
+    transition: all .3s linear;
     position: absolute;
 
     
@@ -275,7 +263,7 @@ body {
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: inherit;
-    animation-delay: .2s;
+    animation-delay: .4s;
     height: 0;
     content: "";
     position: absolute;
@@ -286,7 +274,7 @@ body {
     left: 50%;
     border-left: 1px solid $color-gray-slight;
     transform: translate(-50%);
-    transition: all .3s ease;
+    transition: all .3s linear;
 
 
     &-q0 {
@@ -295,7 +283,6 @@ body {
       right: 50%;
       bottom: 0;
       left: 50%;
-      transition: all .3s ease;
     }
 
     &-q1 {
@@ -304,7 +291,6 @@ body {
       bottom: 0;
       left: 95%;
       right: 5%;
-      transition: all .3s ease;
     }
 
     &-q2 {
@@ -313,7 +299,6 @@ body {
       bottom: 0;
       left: 5%;
       right: 95%;
-      transition: all .3s ease;
     }
 
     &-q3 {
@@ -322,7 +307,6 @@ body {
       bottom: 0;
       left: 95%;
       right: 5%;
-      transition: all .3s ease;
     }
 
     &-q4 {
@@ -331,7 +315,6 @@ body {
       bottom: 0;
       left: 5%;
       right: 95%;
-      transition: all .3s ease;
     }
   }
 
@@ -352,7 +335,7 @@ body {
     left: 0;
     right: 0;
     border-top: 1px solid $color-gray-slight;
-    transition: all .3s ease;
+    transition: all .3s linear;
 
     &-q0 {
       @extend .flex-container-lineX;
@@ -360,7 +343,6 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      transition: all .3s ease;
     }
 
     &-q1 {
@@ -369,7 +351,6 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      transition: all .3s ease;
     }
 
     &-q2 {
@@ -378,7 +359,6 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      transition: all .3s ease;
     }
 
     &-q3 {
@@ -387,7 +367,6 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      transition: all .3s ease;
     }
 
     &-q4 {
@@ -396,7 +375,6 @@ body {
       bottom: 0;
       left: 0;
       right: 0;
-      transition: all .3s ease;
     }
 
   }
@@ -421,7 +399,7 @@ body {
   bottom: 50%;
   left: 50%;
   pointer-events: none;
-  transition: all .3s ease;
+  transition: all .3s linear;
 
   &-q0 {
     text-align: center;
@@ -435,7 +413,7 @@ body {
     right: 50%;
     bottom: 50%;
     left: 50%;
-    transition: all .3s ease;
+    transition: all .3s linear;
 
     img {
       cursor: pointer;
@@ -448,6 +426,7 @@ body {
       }
     }
   }
+  
 
   &-q1 {
     @extend .flex-item-q0;
