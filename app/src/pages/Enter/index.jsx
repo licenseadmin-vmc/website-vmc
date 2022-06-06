@@ -70,7 +70,7 @@ function Enter() {
                       <h1>IVD Compliance</h1>
                       <p>IVDR enacted May 26, 2022<br />
                         Requirement for post-market surveyance of all IVD</p>
-                      <a onClick={() => handleQuadrant(1)}>Tell me about it</a>
+                      <a onClick={() => handleQuadrant(1)}>More Info</a>
                     </div>
                   </div>
                 }
@@ -83,7 +83,7 @@ function Enter() {
                         <h1>VitroMetrics Opportunity</h1>
                         <p className="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.</p>
 
-                        <a onClick={() => handleQuadrant(0)}>Go Back</a>
+                        <a onClick={() => handleQuadrant(0)}>Home</a>
                       </div>
                     </div>
                   </> : selectedQuadrant == 0 &&
@@ -108,7 +108,7 @@ function Enter() {
                         <h1>VitroMetrics Advantage</h1>
                         <p className="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.</p>
 
-                        <a onClick={() => handleQuadrant(0)}>Go Back</a>
+                        <a onClick={() => handleQuadrant(0)}>Home</a>
                       </div>
                     </div>
                   </> : selectedQuadrant == 0 &&
@@ -119,7 +119,7 @@ function Enter() {
                       <p>30 years of regulatory experience<br />
                         20 years of EQA data
                       </p>
-                      <a onClick={() => handleQuadrant(3)}>Explore</a>
+                      <a onClick={() => handleQuadrant(3)}>More Info</a>
                     </div>
                   </div>
                 }
@@ -132,7 +132,7 @@ function Enter() {
                         <h1>VitroMetrics Datacube</h1>
                         <p className="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.</p>
 
-                        <a onClick={() => handleQuadrant(0)}>Go Back</a>
+                        <a onClick={() => handleQuadrant(0)}>Home</a>
                       </div>
                     </div>
                   </> : selectedQuadrant == 0 &&
