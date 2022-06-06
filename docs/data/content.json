@@ -1,0 +1,41 @@
+[
+  {
+    "id": 0,
+    "title": "Your IVDR Solution",
+    "subtitle": "powered by <strong>VitroMetrics</strong>",
+    "line1": "As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect.",
+    "line2":"<strong>VitroMetrics has your complete solution.</strong>"
+  },
+  {
+    "id": 1,
+    "title": "IVD Compliance",
+    "abstract": "IVDR enacted May 26, 2022<br />Requirement for post-market surveyance of all IVD",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
+    "buttonBack":"HOME",
+    "buttonCTA":"Discover"
+  },
+  {
+    "id": 2,
+    "title": "VitroMetrics Opportunity",
+    "abstract": "IVD is a USD 117B market, which will grow to 128B by 2028<br />Compliance cost estimated at USD 3.5B – 3% of revenues<br />Compliance market estimated at USD 900M<br />EQA (External Quality Assessment) data is fit for purpose",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
+    "buttonBack":"HOME",
+    "buttonCTA":"Learn More"
+  },
+  {
+    "id": 3,
+    "title": "VitroMetrics Advantage",
+    "abstract": "30 years of regulatory experience<br />20 years of EQA data",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
+    "buttonBack":"HOME",
+    "buttonCTA":"Explore"
+  },
+  {
+    "id":4,
+    "title": "VitroMetrics Datacube",
+    "abstract": "AI analytics applied to big data<br />Mutliple facets of data collected<br />Multiple compliance regions satified with single solution",
+    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
+    "buttonBack":"HOME",
+    "buttonCTA":"More Info"
+  }
+]
