@@ -6,7 +6,6 @@ import {
   Redirect,
 } from "react-router-dom";
 
-import Home from "../pages/Home";
 import Enter from "../pages/Enter";
 
 

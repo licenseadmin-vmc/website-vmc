@@ -8,7 +8,7 @@ p {
 
 h1 {
   font-weight: $default;
-  color: $color-alt-default;
+  color: $color-alt;
   margin: 0;
   padding: 0;
   line-height: auto;
@@ -22,7 +22,7 @@ h1 {
 
 h2 {
   font-weight: $default;
-  color: $color-alt-default;
+  color: $color-alt;
   margin: 0;
   padding: 0;
   font-size: $type-h2;
@@ -35,7 +35,7 @@ h2 {
 }
 
 h3 {
-  color: $color-alt-default;
+  color: $color-alt;
   padding: 0;
   margin: 0;
   font-weight: $default;
@@ -43,7 +43,7 @@ h3 {
 }
 
 h4 {
-  color: $color-alt-default;
+  color: $color-alt;
   padding: 0;
   margin: 0;
   font-weight: $default;
@@ -52,7 +52,7 @@ h4 {
 
   strong {
     font-weight: $bold;
-    color: $color-alt-default;
+    color: $color-alt;
   }
 }
 
