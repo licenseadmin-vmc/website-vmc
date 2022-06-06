@@ -141,7 +141,7 @@ body {
 
     position: absolute;
     // transform: translate(-50%);
-    transition: all .3s linear;
+    transition: all .3s ease;
     position: absolute;
 
     
@@ -259,7 +259,7 @@ body {
   &-lineY {
     animation: delayGrowY;
     animation-duration: 0.3s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: inherit;
@@ -274,7 +274,7 @@ body {
     left: 50%;
     border-left: 1px solid $color-gray-slight;
     transform: translate(-50%);
-    transition: all .3s linear;
+    transition: all .3s ease;
 
 
     &-q0 {
@@ -321,7 +321,7 @@ body {
   &-lineX {
     animation: delayGrowX;
     animation-duration: 0.3s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
     animation-direction: normal;
     animation-fill-mode: forwards;
     animation-play-state: inherit;
@@ -335,7 +335,7 @@ body {
     left: 0;
     right: 0;
     border-top: 1px solid $color-gray-slight;
-    transition: all .3s linear;
+    transition: all .3s ease;
 
     &-q0 {
       @extend .flex-container-lineX;
@@ -399,7 +399,7 @@ body {
   bottom: 50%;
   left: 50%;
   pointer-events: none;
-  transition: all .3s linear;
+  transition: all .3s ease;
 
   &-q0 {
     text-align: center;
@@ -413,7 +413,7 @@ body {
     right: 50%;
     bottom: 50%;
     left: 50%;
-    transition: all .3s linear;
+    transition: all .3s ease;
 
     img {
       cursor: pointer;

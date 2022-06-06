@@ -200,7 +200,7 @@ function Enter() {
 
               <div className={`flex-item-q` + selectedQuadrant}>
 
-                <img className="zoom-out" onClick={() => handleQuadrant(0)} src='img/logo-vm.png' height='72' /> <div className='nudge-md'></div>
+                <img className="zoom-out" style={{ cursor: selectedQuadrant !== 0 ? "pointer" : "default" }} onClick={() => handleQuadrant(0)} src='img/logo-vm.png' height='72' /> <div className='nudge-md'></div>
 
               </div>
 
