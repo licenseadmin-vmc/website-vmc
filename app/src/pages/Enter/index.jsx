@@ -67,7 +67,7 @@ function Enter() {
                   : selectedQuadrant == 0 &&
                   <div className="quadrant-1 fade-in">
                     <div>
-                      <h1>IVD Compliance</h1>
+                      <h1>IVD Compliance (GREG TEST COMMIT from GIT)</h1>
                       <p>IVDR enacted May 26, 2022<br />
                         Requirement for post-market surveyance of all IVD</p>
                       <a onClick={() => handleQuadrant(1)}>More Info</a>
