@@ -10,7 +10,7 @@
     "id": 1,
     "title": "VitroMetrics Compliance",
     "abstract": "IVDR enacted May 26, 2022<br />Requirement for post-market surveyance of all IVD",
-    "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante. Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
+    "body": "<ul><li> After the IVDR was enacted on May 26, 2022 all IVD manufacturers have been required to provide post-market surveyance of their devices</li>	<li>Evidence comes from disparate sources that are difficult to acquire and manage</li>	<li>Recurring verified testing evidence is readily available to manufacturers</li>	</ul>",
     "buttonBack":"HOME",
     "buttonCTA":"More Info"
   },
