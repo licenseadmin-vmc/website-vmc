@@ -10,7 +10,6 @@ function Enter() {
   const [quadrants, setQuadrants] = useState(false);
   const [quadrantLines, setQuadrantLines] = useState(false);
   const [content, setContent] = useState([]);
-  const [imageJump, setImageJump] = useState(false);
 
   useEffect(() => {
 
@@ -19,9 +18,7 @@ function Enter() {
     setTimeout(() => {
       setQuadrants(true)
     }, 5700);
-    setTimeout(() => {
-      setImageJump(true)
-    }, 5700);
+
     setTimeout(() => {
       setQuadrantLines(true)
     }, 5300);
@@ -31,41 +28,27 @@ function Enter() {
       try {
         const response = await axios.get(`data/content.json?` + (Math.floor(Math.random() * 100000)));
         setContent(response.data);
-        console.log(response.data)
       } catch (err) {
         console.error(err);
       }
     })();
 
-
-
-
   }, []);
-
-
-
-
-  // function resetEverything() {
-
-  //   window.location.reload();
-  // }
 
   function handleQuadrant(event) {
     setSelectedQuadrant(event)
   }
 
-  return content.length && (
+  return content.length > 0 && (
     <>
-      {loading ? (
+      {loading ?
         <div className="flex-container">
-
           <div className="load"></div>
         </div>
-      ) : (
+        :
         <>
 
           <div className="flex-container">
-
 
             {quadrants ?
               <>
@@ -205,9 +188,6 @@ function Enter() {
 
               </div>
 
-
-
-
             </div>
 
             {quadrantLines &&
@@ -222,7 +202,7 @@ function Enter() {
           <Footer />
 
         </>
-      )
+
       }
     </>
   );
