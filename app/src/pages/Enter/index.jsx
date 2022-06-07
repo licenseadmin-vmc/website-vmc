@@ -99,9 +99,10 @@ function Enter() {
                     <div className="quadrant-2">
                       <div>
                         <h1>{content[2].title}</h1>
-                        <p className="fade-in">{content[2].body}</p>
 
                         <p className="fade-in" dangerouslySetInnerHTML={{ __html: content[2].body }} />
+                        <a onClick={() => handleQuadrant(0)}>{content[2].buttonBack}</a>
+
                       </div>
                     </div>
                   </>
