@@ -29,6 +29,191 @@ body {
   user-select: none;
 }
 
+.subtle {
+  cursor: pointer;
+  margin: 0 0 36px 0;
+  
+
+  h1 {
+    opacity: .3;
+  }
+
+  &:hover {
+    h1 {
+    opacity: .7;
+
+    }
+  }
+}
+
+
+.full {
+  cursor: pointer;
+  margin: 0 0 36px 0;
+}
+
+.divide {
+  background: $color-red-default;
+  width: 100%;
+  height: 3px;
+  margin: 6px 0 0 0;
+  display: flex;
+  align-self: center;
+  
+  &-off {
+    background: $color-orange-default;
+    @extend .divide;
+  }
+}
+
+section {
+
+  text-align: left;
+  display: flex;
+  justify-content: center;
+  padding: 48px 84px 0 84px;
+
+  .left {
+    display: inline-flex;
+    flex: 1;
+    padding: 0 24px;
+    align-items: flex-start;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 300px;
+    font-size: $type-copy;
+
+    img {
+      cursor: pointer !important;
+    }
+
+    h1 {
+      font-size: $type-menu;
+      color: $color-gray-darker;
+      font-weight: $light;
+    }
+
+  }
+  
+  .right {
+    display: flex;
+    padding: 0 24px;
+    align-items: flex-start;
+    font-size: $type-copy;
+    flex-direction: column;
+
+    .links {
+      margin-bottom: 24px;
+    }
+
+
+    p {
+      font-size: $type-copy;
+      color: $color-gray-darker;
+      padding: 0;
+      margin: 0 0 12px 0;
+    }
+    
+
+    a {
+      color: $color-gray-darkest;
+      // border: 1px solid $color-gray-half;
+      // background: transparent;
+      // padding: 6px 24px;
+      // width: 200px;
+      // justify-content: center;
+      // border-radius: $radius-default;
+      font-size: $type-lg;
+      // font-weight: $default;
+      cursor: pointer !important;
+      text-transform: uppercase;
+      transition: $transition-border;
+      
+      &:hover {
+        transition: $transition-border;
+        // border: 1px solid $color-gray-darkest;
+      }
+    }
+  
+  
+  
+    h2 {
+      font-size: $type-h1;
+      color: $color-gray-darker;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      padding: 0 0 12px 0;
+      margin-left: 16px;
+      
+    }
+    
+    
+    ul>li {
+      font-size: $type-copy;
+      color: $color-gray-darker;
+      list-style: circle;
+    
+  
+    }
+
+  
+  }
+
+  
+
+
+}
+
+.header {
+
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 48px;
+  opacity: 0;
+
+  animation: delayOpacity;
+  animation-duration: .2s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: inherit;
+  animation-delay: 5.9s;
+
+
+  &-left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-start;
+    max-width: 465px;
+    cursor: pointer;
+
+    img {
+      padding: 0 12px 0 0;
+    }
+
+  }
+
+  &-right {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    span {
+      font-size: $type-sm;
+      color: $color-red;
+    }
+  }
+}
+
 .quadrant {
   position: absolute;
   color: $color-gray-darkest;
@@ -66,7 +251,7 @@ body {
     justify-content: flex-start;
     margin-right: 48px;
 
-    
+
   }
 
   &-2 {
@@ -124,6 +309,7 @@ body {
     margin-left: 48px;
 
   }
+
   &-4b {
     @extend .quadrant;
     left: auto;
@@ -144,7 +330,7 @@ body {
     transition: all .3s ease;
     position: absolute;
 
-    
+
 
     &-1 {
       @extend .quadrant-select;
@@ -152,6 +338,7 @@ body {
       bottom: 20%;
       width: 100%;
       left: 30%;
+
       div {
         color: $color-gray-darkest;
         display: flex;
@@ -170,6 +357,7 @@ body {
       width: 100%;
       left: 0;
       right: 30%;
+
       div {
         color: $color-gray-darkest;
         display: flex;
@@ -187,6 +375,7 @@ body {
       bottom: 20%;
       width: 100%;
       left: 30%;
+
       div {
         color: $color-gray-darkest;
         display: flex;
@@ -205,6 +394,7 @@ body {
       width: 100%;
       left: 0;
       right: 30%;
+
       div {
         color: $color-gray-darkest;
         display: flex;
@@ -255,6 +445,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  pointer-events: none;
 
   &-lineY {
     animation: delayGrowY;
@@ -320,7 +511,7 @@ body {
 
   &-lineX {
     animation: delayGrowX;
-    animation-duration: 0.6s;
+    animation-duration: 5s;
     animation-timing-function: ease;
     animation-direction: normal;
     animation-fill-mode: forwards;
@@ -426,7 +617,7 @@ body {
       }
     }
   }
-  
+
 
   &-q1 {
     @extend .flex-item-q0;
@@ -446,15 +637,16 @@ body {
     right: 95%;
 
   }
-  
+
   &-q3 {
     @extend .flex-item-q0;
     top: calc(5% - 36px);
     left: 95%;
     bottom: 90%;
     right: 5%;
-    
+
   }
+
   &-q4 {
     @extend .flex-item-q0;
     top: calc(5% - 36px);

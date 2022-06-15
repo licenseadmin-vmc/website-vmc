@@ -8,6 +8,17 @@
   animation-play-state: inherit;
 }
 
+.fade-in-delay-6s {
+  opacity: 0;
+  animation: fadeIn;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: inherit;
+  animation-delay: 6.5s;
+}
+
 
 @keyframes delayGrowY {
   0% {
@@ -18,6 +29,16 @@
   100% {
     // opacity: 1;
     height: 100%;
+  }
+}
+
+@keyframes delayOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }
 
@@ -76,7 +97,7 @@
 
 .zoom-out {
   animation-name: zoomOut;
-  animation-duration: 1.2s;
+  animation-duration: 5.8s;
   animation-timing-function: ease;
   animation-fill-mode: forwards;
   animation-direction: normal;
@@ -86,10 +107,33 @@
   transform-origin: center;
   transform: scale(1);
   transition: $transition-scale;
-
 }
 
+.footer-slide-in {
+  animation-name: slideIn;
+  animation-duration: .3s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: 1;
+  animation-play-state: inherit;
+  transform-origin: center;
+  animation-delay: 5.8s;
+  transform: translateY(100%);
+}
 
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+
+  }
+
+  100% {
+    transform: translateY(0);
+
+  }
+
+}
 
 @keyframes zoomOut {
   0% {
@@ -98,14 +142,19 @@
 
   }
 
-  36% {
+  6% {
     opacity: 1;
     transform: translateY(0) scale(1) rotate(0deg);
 
   }
 
-  100% {
+  96% {
     opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+
+  100% {
+    opacity: 0;
     transform: scale(1) rotate(0deg);
   }
 }
@@ -132,4 +181,3 @@
     width: 0;
   }
 }
-

@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect'
 
 import Footer from '../Footer'
 
-function Enter () {
+function Enter() {
   const [loading, setLoading] = useState(true)
   const [selectedQuadrant, setSelectedQuadrant] = useState(0)
   const [quadrants, setQuadrants] = useState(false)
@@ -23,19 +23,19 @@ function Enter () {
       setQuadrantLines(true)
     }, 5300)
 
-    ;(async function () {
-      try {
-        const response = await axios.get(
-          `data/content.json?` + Math.floor(Math.random() * 100000)
-        )
-        setContent(response.data)
-      } catch (err) {
-        console.error(err)
-      }
-    })()
+      ; (async function () {
+        try {
+          const response = await axios.get(
+            `data/content.json?` + Math.floor(Math.random() * 100000)
+          )
+          setContent(response.data)
+        } catch (err) {
+          console.error(err)
+        }
+      })()
   }, [])
 
-  function handleQuadrant (event) {
+  function handleQuadrant(event) {
     setSelectedQuadrant(event)
   }
 
@@ -52,200 +52,95 @@ function Enter () {
           </div>
         ) : (
           <>
+
+            <div className='header'>
+              <div className='header-left' onClick={() => handleQuadrant(1)}>
+                <img src='img/logo-vm.png' height='72' />
+
+                <Typewriter
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                    cursor: '',
+                    delay: 12
+                  }}
+                  onInit={typewriter => {
+                    typewriter
+                      .pauseFor(4000)
+                      .typeString("<h1>VitroMetrics</h1>")
+                      .typeString("<h4>Your <strong>IVDR</strong> Experts</h4>")
+                      .start()
+                  }}
+                />
+
+
+              </div>
+
+              <div className='header-right'>
+
+                <Typewriter
+                  options={{
+                    autoStart: true,
+                    loop: false,
+                    cursor: '',
+                    delay: 25
+                  }}
+                  onInit={typewriter => {
+                    typewriter
+                      .typeString("As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect. <strong>VitroMetrics has your complete solution.</strong>")
+                      .start()
+                  }}
+                />
+
+              </div>
+            </div>
+
+
             <div className='flex-container'>
-              {quadrants ? (
-                <>
-                  {selectedQuadrant == 1 ? (
-                    <>
-                      <div className='quadrant-select-1'></div>
 
-                      <div className='quadrant-1'>
-                        <div>
-                          <h1>{content[1].title}</h1>
-                          <p
-                            className='fade-in'
-                            dangerouslySetInnerHTML={{
-                              __html: content[1].body
-                            }}
-                          />
 
-                          <a onClick={() => handleQuadrant(0)}>
-                            {content[1].buttonBack}
-                          </a>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    selectedQuadrant == 0 && (
-                      <div className='quadrant-1 fade-in'>
-                        <div>
-                          <h1>{content[1].title}</h1>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: content[1].abstract
-                            }}
-                          />
-                          <a onClick={() => handleQuadrant(1)}>
-                            {content[1].buttonCTA}
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  )}
-                  {selectedQuadrant == 2 ? (
-                    <>
-                      <div className='quadrant-select-2'></div>
 
-                      <div className='quadrant-2'>
-                        <div>
-                          <h1>{content[2].title}</h1>
 
-                          <p
-                            className='fade-in'
-                            dangerouslySetInnerHTML={{
-                              __html: content[2].body
-                            }}
-                          />
-                          <a onClick={() => handleQuadrant(0)}>
-                            {content[2].buttonBack}
-                          </a>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    selectedQuadrant == 0 && (
-                      <div className='quadrant-2 fade-in'>
-                        <div>
-                          <h1>{content[2].title}</h1>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: content[2].abstract
-                            }}
-                          />
-                          <a onClick={() => handleQuadrant(2)}>
-                            {content[2].buttonCTA}
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  )}
-                  {selectedQuadrant == 3 ? (
-                    <>
-                      <div className='quadrant-select-3'></div>
+              <div className='follow'>
+                {selectedQuadrant == 0 && (
+                  <>
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 12
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pauseFor(200)
+                          .typeString('<h1>' + content[0].title + '</h1>')
+                          .pauseFor(400)
+                          .typeString('<h4>' + content[0].subtitle + '</h4>')
+                          .pauseFor(1000)
+                          .deleteAll(1)
+                          .pasteString(
+                            "<h2 class='fade-in'>" +
+                            content[0].line1 +
+                            '</h2>'
+                          )
+                          .pauseFor(750)
+                          .pasteString("<div class='nudge-md'></div>")
+                          .pasteString(
+                            "<h2 class='pulse-turbo'>" +
+                            content[0].line2 +
+                            '</h2>'
+                          )
+                          .pauseFor(2000)
+                          .deleteAll(1)
+                          .start()
+                      }}
+                    />
 
-                      <div className='quadrant-3b'>
-                        <div>
-                          <h1>{content[3].title}</h1>
-                          <p
-                            className='fade-in'
-                            dangerouslySetInnerHTML={{
-                              __html: content[3].body
-                            }}
-                          />
+                  </>
+                )}
+              </div>
 
-                          <a onClick={() => handleQuadrant(0)}>
-                            {content[3].buttonBack}
-                          </a>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    selectedQuadrant == 0 && (
-                      <div className='quadrant-3 fade-in'>
-                        <div>
-                          <h1>{content[3].title}</h1>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: content[3].abstract
-                            }}
-                          />
-                          <a onClick={() => handleQuadrant(3)}>
-                            {content[3].buttonCTA}
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  )}
-                  {selectedQuadrant == 4 ? (
-                    <>
-                      <div className='quadrant-select-4'></div>
-
-                      <div className='quadrant-4b'>
-                        <div>
-                          <h1>{content[4].title}</h1>
-
-                          <p
-                            className='fade-in'
-                            dangerouslySetInnerHTML={{
-                              __html: content[4].body
-                            }}
-                          />
-
-                          <a onClick={() => handleQuadrant(0)}>
-                            {content[4].buttonBack}
-                          </a>
-                        </div>
-                      </div>
-                    </>
-                  ) : (
-                    selectedQuadrant == 0 && (
-                      <div className='quadrant-4 fade-in'>
-                        <div>
-                          <h1>{content[4].title}</h1>
-                          <p
-                            dangerouslySetInnerHTML={{
-                              __html: content[4].abstract
-                            }}
-                          />
-                          <a onClick={() => handleQuadrant(4)}>
-                            {content[4].buttonCTA}
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  )}
-                </>
-              ) : (
-                <div className='follow'>
-                  {selectedQuadrant == 0 && (
-                    <>
-                      <Typewriter
-                        options={{
-                          autoStart: true,
-                          loop: false,
-                          cursor: '',
-                          delay: 12
-                        }}
-                        onInit={typewriter => {
-                          typewriter
-                            .pauseFor(200)
-                            .typeString('<h1>' + content[0].title + '</h1>')
-                            .pauseFor(400)
-                            .typeString('<h4>' + content[0].subtitle + '</h4>')
-                            .pauseFor(1000)
-                            .deleteAll(1)
-                            .pasteString(
-                              "<h2 class='fade-in'>" +
-                                content[0].line1 +
-                                '</h2>'
-                            )
-                            .pauseFor(750)
-                            .pasteString("<div class='nudge-md'></div>")
-                            .pasteString(
-                              "<h2 class='pulse-turbo'>" +
-                                content[0].line2 +
-                                '</h2>'
-                            )
-
-                            .pauseFor(1700)
-                            .deleteAll(1)
-                            .start()
-                        }}
-                      />
-                    </>
-                  )}
-                </div>
-              )}
 
               <div className='row'>
                 <div className={`flex-item-q` + selectedQuadrant}>
@@ -262,17 +157,383 @@ function Enter () {
                 </div>
               </div>
 
-              {quadrantLines && (
-                <>
-                  <div
-                    className={`flex-container-lineX-q` + selectedQuadrant}
-                  ></div>
-                  <div
-                    className={`flex-container-lineY-q` + selectedQuadrant}
-                  ></div>
-                </>
-              )}
+
+
             </div>
+
+            <div style={{ position: "absolute", top: "204px" }}>
+
+              {selectedQuadrant == 0 && (
+                <section>
+                  <div className='left'>
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pauseFor(6200)
+                          .typeString("<div class='full' class='fade-in'><h1>" + content[1].title + "</h1><div class='divide'></div></div>")
+                          .start()
+                      }}
+                    />
+                    <div className="subtle fade-in-delay-6s">
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1>
+                    </div>
+                    <div className="subtle fade-in-delay-6s">
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1>
+                    </div>
+                    <div className="subtle fade-in-delay-6s">
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1>
+                    </div>
+                    <div className="subtle fade-in-delay-6s">
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1>
+                    </div>
+
+                  </div>
+
+                  <div className='right'>
+
+                    <div className='links'>
+                      <a className="fade-in-delay-6s" onClick={() => handleQuadrant(2)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pauseFor(6200)
+                          .pasteString("<p class='fade-in'>" + content[1].abstract + "</p>")
+                          .pasteString("<p class='fade-in'>" + content[1].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+
+                  </div>
+                </section>
+              )}
+
+              {selectedQuadrant == 1 && (
+                <section>
+                  <div className='left'>
+
+                    <div className='full'>
+                      <h1 onClick={() => handleQuadrant(1)}>
+                        {content[1].title}
+                      </h1><div className='divide'></div>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1>
+                    </div>
+
+                  </div>
+                  <div className='right'>
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(2)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pasteString("<p>" + content[1].abstract + "</p>")
+                          .pasteString("<p>" + content[1].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+                  </div>
+                </section>
+              )}
+
+              {selectedQuadrant == 2 && (
+                <section>
+                  <div className='left'>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(1)}>
+                        {content[1].title}
+                      </h1>
+                    </div>
+
+                    <div className='full'>
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1><div className='divide'></div>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1>
+                    </div>
+
+
+                  </div>
+                  <div className='right'>
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(3)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pasteString("<p>" + content[2].abstract + "</p>")
+                          .pasteString("<p>" + content[2].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+                  </div>
+
+                </section>
+              )}
+              {selectedQuadrant == 3 && (
+                <section className='section'>
+                  <div className='left'>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(1)}>
+                        {content[1].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1>
+                    </div>
+                    <div className='full'>
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1><div className='divide'></div>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1>
+                    </div>
+                  </div>
+                  <div className='right'>
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(4)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pasteString("<p class='fade-in'>" + content[3].abstract + "</p>")
+                          .pasteString("<p class='fade-in'>" + content[3].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+                  </div>
+                </section>
+              )}
+              {selectedQuadrant == 4 && (
+                <section className='section'>
+                  <div className='left'>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(1)}>
+                        {content[1].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1>
+                    </div>
+                    <div className='full'>
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1><div className='divide'></div>
+                    </div>
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1>
+                    </div>
+
+                  </div>
+                  <div className='right'>
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(5)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pasteString("<p class='fade-in'>" + content[4].abstract + "</p>")
+                          .pasteString("<p class='fade-in'>" + content[4].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+                  </div>
+                </section>
+              )}
+              {selectedQuadrant == 5 && (
+                <section className='section'>
+                  <div className='left'>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(1)}>
+                        {content[1].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(2)}>
+                        {content[2].title}
+                      </h1>
+                    </div>
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(3)}>
+                        {content[3].title}
+                      </h1>
+                    </div>
+
+
+                    <div className='subtle'>
+                      <h1 onClick={() => handleQuadrant(4)}>
+                        {content[4].title}
+                      </h1>
+                    </div>
+
+                    <div className='full'>
+                      <h1 onClick={() => handleQuadrant(5)}>
+                        {content[5].title}
+                      </h1><div className='divide'></div>
+                    </div>
+
+
+                  </div>
+                  <div className='right'>
+                    <Typewriter
+                      options={{
+                        autoStart: true,
+                        loop: false,
+                        cursor: '',
+                        delay: 0
+                      }}
+                      onInit={typewriter => {
+                        typewriter
+                          .pasteString("<p class='fade-in'>" + content[5].abstract + "</p>")
+                          .pasteString("<p class='fade-in'>" + content[5].body + "</p>")
+                          .start()
+                      }}
+                    />
+
+                  </div>
+                </section>
+              )}
+              <div className="nudge-xxl"></div>
+            </div>
+
+
 
             <Footer />
           </>
