@@ -120,7 +120,7 @@ function Enter() {
                           .pauseFor(1000)
                           .deleteAll(1)
                           .pasteString(
-                            "<h2 class='fade-in'>" +
+                            "<h2>" +
                             content[0].line1 +
                             '</h2>'
                           )
@@ -177,7 +177,7 @@ function Enter() {
                       onInit={typewriter => {
                         typewriter
                           .pauseFor(6200)
-                          .typeString("<div class='full' class='fade-in'><h1>" + content[1].title + "</h1><div class='divide'></div></div>")
+                          .typeString("<div class='full'><h1>" + content[1].title + "</h1><div class='divide'></div></div>")
                           .start()
                       }}
                     />
@@ -206,11 +206,7 @@ function Enter() {
 
                   <div className='right'>
 
-                    <div className='links'>
-                      <a className="fade-in-delay-6s" onClick={() => handleQuadrant(2)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
+
 
                     <Typewriter
                       options={{
@@ -222,11 +218,17 @@ function Enter() {
                       onInit={typewriter => {
                         typewriter
                           .pauseFor(6200)
-                          .pasteString("<p class='fade-in'>" + content[1].abstract + "</p>")
-                          .pasteString("<p class='fade-in'>" + content[1].body + "</p>")
+                          .pasteString("<p>" + content[1].abstract + "</p>")
+                          .pasteString("<p>" + content[1].body + "</p>")
                           .start()
                       }}
                     />
+
+                    <div className='links'>
+                      <a className="fade-in-delay-6s" onClick={() => handleQuadrant(2)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
 
 
                   </div>
@@ -269,11 +271,6 @@ function Enter() {
                   <div className='right'>
 
 
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(2)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
 
                     <Typewriter
                       options={{
@@ -289,6 +286,13 @@ function Enter() {
                           .start()
                       }}
                     />
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(2)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
 
                   </div>
                 </section>
@@ -330,11 +334,6 @@ function Enter() {
                   <div className='right'>
 
 
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(3)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
 
                     <Typewriter
                       options={{
@@ -350,6 +349,13 @@ function Enter() {
                           .start()
                       }}
                     />
+
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(3)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
 
                   </div>
 
@@ -389,12 +395,6 @@ function Enter() {
                   <div className='right'>
 
 
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(4)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
 
                     <Typewriter
                       options={{
@@ -405,11 +405,18 @@ function Enter() {
                       }}
                       onInit={typewriter => {
                         typewriter
-                          .pasteString("<p class='fade-in'>" + content[3].abstract + "</p>")
-                          .pasteString("<p class='fade-in'>" + content[3].body + "</p>")
+                          .pasteString("<p>" + content[3].abstract + "</p>")
+                          .pasteString("<p>" + content[3].body + "</p>")
                           .start()
                       }}
                     />
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(4)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
+
 
                   </div>
                 </section>
@@ -449,13 +456,6 @@ function Enter() {
                   </div>
                   <div className='right'>
 
-
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(5)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
                     <Typewriter
                       options={{
                         autoStart: true,
@@ -465,11 +465,17 @@ function Enter() {
                       }}
                       onInit={typewriter => {
                         typewriter
-                          .pasteString("<p class='fade-in'>" + content[4].abstract + "</p>")
-                          .pasteString("<p class='fade-in'>" + content[4].body + "</p>")
+                          .pasteString("<p>" + content[4].abstract + "</p>")
+                          .pasteString("<p>" + content[4].body + "</p>")
                           .start()
                       }}
                     />
+
+                    <div className='links'>
+                      <a onClick={() => handleQuadrant(5)}>
+                        <i className="fa-light fa-arrow-right"></i>
+                      </a>
+                    </div>
 
                   </div>
                 </section>
@@ -521,8 +527,8 @@ function Enter() {
                       }}
                       onInit={typewriter => {
                         typewriter
-                          .pasteString("<p class='fade-in'>" + content[5].abstract + "</p>")
-                          .pasteString("<p class='fade-in'>" + content[5].body + "</p>")
+                          .pasteString("<p>" + content[5].abstract + "</p>")
+                          .pasteString("<p>" + content[5].body + "</p>")
                           .start()
                       }}
                     />

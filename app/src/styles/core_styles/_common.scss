@@ -103,7 +103,24 @@ section {
     flex-direction: column;
 
     .links {
-      margin-bottom: 24px;
+      margin-top: 24px;
+
+      a {
+        border: 1px solid $color-gray-half;
+        color: $color-gray-dark;
+        padding: 6px 48px;
+        border-radius: $radius-default;
+        
+        i {
+          font-size: $type-copy;
+        }
+        
+        &:hover {
+          border: 1px solid $color-gray-darkest;
+          color: $color-gray-darkest;
+
+        }
+      }
     }
 
 
