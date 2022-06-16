@@ -5,13 +5,13 @@ html {
   background-size: 12px 12px;
   font-family: $font-alt;
   overflow-x: hidden;
-  background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
+  // background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
 
-  // RETINA
-  @media (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi) {
-    background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
-  }
+  // // RETINA
+  // @media (-webkit-min-device-pixel-ratio: 2),
+  // (min-resolution: 192dpi) {
+  //   background-image: radial-gradient(circle, $color-brand-light 1px, transparent 1px);
+  // }
 
 }
 
