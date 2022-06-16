@@ -9,7 +9,7 @@
   {
     "id": 1,
     "title": "The Problem",
-    "abstract": "Blah Blah Blah",
+    "abstract": "<b>Blah Blah Blah</b>",
     "body": "Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
     "buttonBack":"Back",
     "buttonCTA":"Our Solution"
