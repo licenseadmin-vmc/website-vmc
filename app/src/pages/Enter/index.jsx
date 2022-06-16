@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import Typewriter from 'typewriter-effect'
 
+
 import Footer from '../Footer'
 
 function Enter() {
@@ -39,6 +40,7 @@ function Enter() {
     setSelectedQuadrant(event)
   }
 
+ 
   return (
     content.length > 0 && (
       <>
@@ -544,6 +546,10 @@ function Enter() {
             <Footer />
           </>
         )}
+
+
+
+      
       </>
     )
   )

@@ -703,3 +703,97 @@ section {
     margin-bottom: 120px;
   }
 }
+
+.MuiBackdrop-root {
+  background: $color-white-medium !important;
+}
+
+
+
+#about .MuiDrawer-paper {
+  padding: 0 !important;
+  width: 240px;
+  background: $color-gray;
+  box-shadow: none;
+  color: $color-white;
+  text-transform: uppercase;
+
+  padding: 48px !important;
+
+  i {
+    font-size: $type-lg;
+    color: $color-gray-darkest;
+    padding: 0 3px;
+    cursor: pointer;
+    position: absolute;
+    right: 24px;
+    top: 24px;
+  }
+
+  p {
+    font-size: $type-copy;
+    font-weight: $default;
+    line-height: $type-md;
+    text-transform: none;
+  }
+ 
+  h2 {
+    font-size: $type-h2;
+    font-weight: $default;
+    color: $color-red;
+  }
+
+  @media (min-width: $break-sm) {
+    width: 500px !important;
+  }
+}
+
+
+
+  .MuiInputBase-input,
+  .MuiInput-input {
+    color: $color-gray-darkest !important;
+    font: $default $type-sm $font-default !important;
+  }
+
+
+  .MuiInput-underline:after {
+    border-bottom: 1px solid $color-gray-dark !important;
+  }
+
+  .MuiInput-underline.Mui-error:after {
+    border-bottom: 1px solid $color-gray-dark !important;
+  }
+
+  .MuiInput-underline:before {
+    border-bottom: 1px solid $color-gray-dark !important;
+  }
+
+  .MuiFormControl-root label {
+    color: $color-gray-dark !important;
+    font-size: $type-default !important;
+  }
+
+
+
+::-webkit-input-placeholder {
+  color: $color-gray-darkest;
+  font-weight: $default;
+  padding: 0 3px;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: $color-gray-darkest;
+  font-weight: $default;
+  padding: 0 3px;
+  opacity: 1;
+}
+
+::placeholder {
+  color: $color-gray-darkest !important;
+  font-weight: $default;
+  padding: 0 3px;
+  opacity: 1;
+}
+

@@ -21,6 +21,25 @@ a {
 
   }
 
+  &-default {
+    color: $color-white;
+    padding:6px 36px;
+    border-radius: $radius-default;
+    display: inline-flex;
+    align-self: baseline;
+    background: $color-gray-dark;
+
+    i {
+      font-size: $type-copy;
+    }
+
+    &:hover {
+      color: $color-white;
+      background: $color-gray-darkest;
+
+    }
+  }
+
 
 
 }
