@@ -183,22 +183,22 @@ function Enter() {
                   <div className="subtle fade-in-delay-6s">
                     <h1 onClick={() => handleQuadrant(1)}>
                       {content[1].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className="subtle fade-in-delay-6s">
                     <h1 onClick={() => handleQuadrant(2)}>
                       {content[2].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className="subtle fade-in-delay-6s">
                     <h1 onClick={() => handleQuadrant(3)}>
                       {content[3].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className="subtle fade-in-delay-6s">
                     <h1 onClick={() => handleQuadrant(4)}>
                       {content[4].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                 </div>
@@ -247,23 +247,23 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(2)}>
                       {content[1].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(3)}>
                       {content[2].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(4)}>
                       {content[3].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(5)}>
                       {content[4].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                 </div>
@@ -272,7 +272,7 @@ function Enter() {
                   <div className="paragraph">
                     <h1>{content[0].title}</h1>
 
-                    <span
+                    <span className='fade-in'
                       dangerouslySetInnerHTML={{
                         __html: content[0].text
                       }}
@@ -283,7 +283,7 @@ function Enter() {
                 </div>
               </section>
             )}
-            
+
             {selectedQuadrant == 2 && (
               <section>
                 <div className='left'>
@@ -291,7 +291,7 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(1)}>
                       {content[0].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='full'>
@@ -303,17 +303,17 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(3)}>
                       {content[2].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(4)}>
                       {content[3].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(5)}>
                       {content[4].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                 </div>
@@ -322,7 +322,7 @@ function Enter() {
                   <div className="paragraph">
                     <h1>{content[1].title}</h1>
 
-                    <span
+                    <span className='fade-in'
                       dangerouslySetInnerHTML={{
                         __html: content[1].text
                       }}
@@ -333,7 +333,7 @@ function Enter() {
                 </div>
               </section>
             )}
-            
+
             {selectedQuadrant == 3 && (
               <section>
                 <div className='left'>
@@ -341,13 +341,13 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(1)}>
                       {content[0].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(2)}>
                       {content[1].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='full'>
@@ -358,12 +358,12 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(4)}>
                       {content[3].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(5)}>
                       {content[4].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                 </div>
@@ -372,7 +372,7 @@ function Enter() {
                   <div className="paragraph">
                     <h1>{content[2].title}</h1>
 
-                    <span
+                    <span className='fade-in'
                       dangerouslySetInnerHTML={{
                         __html: content[2].text
                       }}
@@ -383,7 +383,7 @@ function Enter() {
                 </div>
               </section>
             )}
-            
+
             {selectedQuadrant == 4 && (
               <section>
                 <div className='left'>
@@ -391,19 +391,19 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(1)}>
                       {content[0].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(2)}>
                       {content[1].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(3)}>
                       {content[2].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='full'>
                     <h1 onClick={() => handleQuadrant(4)}>
@@ -413,7 +413,7 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(5)}>
                       {content[4].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                 </div>
@@ -422,7 +422,7 @@ function Enter() {
                   <div className="paragraph">
                     <h1>{content[3].title}</h1>
 
-                    <span
+                    <span className='fade-in'
                       dangerouslySetInnerHTML={{
                         __html: content[3].text
                       }}
@@ -433,7 +433,7 @@ function Enter() {
                 </div>
               </section>
             )}
-         
+
             {selectedQuadrant == 5 && (
               <section>
                 <div className='left'>
@@ -441,24 +441,24 @@ function Enter() {
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(1)}>
                       {content[0].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(2)}>
                       {content[1].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
 
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(3)}>
                       {content[2].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='subtle'>
                     <h1 onClick={() => handleQuadrant(4)}>
                       {content[3].title}
-                    </h1>
+                    </h1><div className="divide-off"></div>
                   </div>
                   <div className='full'>
                     <h1 onClick={() => handleQuadrant(5)}>
@@ -472,7 +472,7 @@ function Enter() {
                   <div className="paragraph">
                     <h1>{content[4].title}</h1>
 
-                    <span
+                    <span className='fade-in'
                       dangerouslySetInnerHTML={{
                         __html: content[4].text
                       }}
@@ -483,11 +483,6 @@ function Enter() {
                 </div>
               </section>
             )}
-
-           
-
-
-
 
 
             <Footer />

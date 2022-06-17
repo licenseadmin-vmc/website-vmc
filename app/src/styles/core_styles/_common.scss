@@ -41,8 +41,11 @@ body {
   cursor: pointer;
   margin: 0 0 36px 0;
   h1 {
-   $font-weight: $default;
+   $font-weight: $default; 
+   
   }
+
+ 
 
 
 }
@@ -58,6 +61,12 @@ body {
   line-height: $type-xl;
   border-top: 6px solid $color-red-default;
   padding: 12px;
+  animation-name: slideMinor;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-direction: normal;
+  animation-play-state: inherit;
+
 
   &-right {
     @extend .pull-quote;
@@ -96,7 +105,7 @@ body {
   align-self: center;
 
   &-off {
-    background: $color-orange-default;
+    background: transparent;
     @extend .divide;
   }
 }
