@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 import axios from 'axios'
 import Typewriter from 'typewriter-effect'
@@ -12,6 +12,7 @@ function Enter() {
   const [quadrants, setQuadrants] = useState(false)
   const [quadrantLines, setQuadrantLines] = useState(false)
   const [content, setContent] = useState([])
+  const [intro, setIntro] = useState([])
 
   useEffect(() => {
 
@@ -30,9 +31,15 @@ function Enter() {
           const response = await axios.get(
             `data/content.json?` + Math.floor(Math.random() * 100000)
           )
+          const introResponse = await axios.get(
+            `data/intro.json?` + Math.floor(Math.random() * 100000)
+          )
           setContent(response.data)
+          setIntro(introResponse.data)
 
-      
+          console.log(response.data);
+          console.log(introResponse.data);
+
 
         } catch (err) {
           console.error(err)
@@ -46,7 +53,7 @@ function Enter() {
 
 
   return (
-    content.length > 0 && (
+    content.length > 0 && intro.length > 0 && (
       <>
         <Helmet titleTemplate='VitroMetrics | %s'>
           <title>Home</title>
@@ -118,21 +125,21 @@ function Enter() {
                         onInit={typewriter => {
                           typewriter
                             .pauseFor(200)
-                            .typeString('<h1>' + content[0].title + '</h1>')
+                            .typeString('<h1>' + intro[0].title + '</h1>')
                             .pauseFor(400)
-                            .typeString('<h4>' + content[0].subtitle + '</h4>')
+                            .typeString('<h4>' + intro[0].subtitle + '</h4>')
                             .pauseFor(1000)
                             .deleteAll(1)
                             .pasteString(
                               "<h2>" +
-                              content[0].line1 +
+                              intro[0].line1 +
                               '</h2>'
                             )
                             .pauseFor(750)
                             .pasteString("<div class='nudge-md'></div>")
                             .pasteString(
                               "<h2 class='pulse-turbo'>" +
-                              content[0].line2 +
+                              intro[0].line2 +
                               '</h2>'
                             )
                             .pauseFor(2000)
@@ -171,73 +178,18 @@ function Enter() {
 
               <section>
 
+                {content && content.map((item, index) => (
+                  <div className="paragraph" key={index}>
+                    <h1>{item.title}</h1>
 
-
-                  <div className='paragraph'>
-                    <h1>THE PROBLEM</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
-
-                    <aside className='pull-quote'>
-                      <span>
-                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
-                      </span>
-                    </aside>
-
-
-                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
-
-                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
-
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: item.text
+                      }}
+                    />
                   </div>
 
-
-                  <div className='paragraph'>
-                    <h1>Section Two</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
-
-                    <aside className='pull-quote-right'>
-                      <span>
-                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
-                      </span>
-                    </aside>
-
-
-                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
-
-                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
-                  </div>
-                 
-                  <div className='paragraph'>
-                    <h1>Section Three</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
-
-                    <aside className='pull-quote'>
-                      <span>
-                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
-                      </span>
-                    </aside>
-
-
-                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
-
-                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
-                  </div>
-                  
-                  <div className='paragraph'>
-                    <h1>Section Four</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
-
-                    <aside className='pull-quote-right'>
-                      <span>
-                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
-                      </span>
-                    </aside>
-
-
-                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
-
-                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
-                  </div>
+                ))}
 
 
               </section>

@@ -1,29 +1,12 @@
 [
   {
-    "id": 0,
-    "title": "Your IVDR Solution",
-    "subtitle": "powered by <strong>VitroMetrics</strong>",
-    "line1": "As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect.",
-    "line2": "<strong>VitroMetrics has your complete solution.</strong>"
-  },
-  {
     "id": 1,
     "title": "The Problem",
     "abstract": "<h1>Blah Blah Blah</h1>",
     "body": "Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
-    "buttonBack": "Back",
-    "buttonCTA": "Our Solution",
-    "content": [
-      {
-        "text": "Blah blah blah"
-      },
-      {
-        "text": "quote blah"
-      },
-      {
-        "text": "blah blah"
-      }
-    ]
+    "buttonBack": "",
+    "buttonCTA": "",
+    "text": " <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p><aside class='pull-quote'><span>In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.</span></aside><p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p><p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>"
   },
   {
     "id": 2,
@@ -32,11 +15,7 @@
     "body": "<ul><li>After the IVDR was enacted on May 26, 2022 all IVD manufacturers have been required to provide post-market surveyance of their devices</li><li>Evidence comes from disparate sources that are difficult to acquire and manage</li><li>Recurring verified testing evidence is readily available to manufacturers</li></ul>",
     "buttonBack": "Back",
     "buttonCTA": "More Info",
-    "content": [
-      {
-        "text": ""
-      }
-    ]
+    "text": " <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p><aside class='pull-quote-right'><span>In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.</span></aside><p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p><p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>"
   },
   {
     "id": 3,
@@ -45,11 +24,7 @@
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
     "buttonBack": "Back",
     "buttonCTA": "More Info",
-    "content": [
-      {
-        "text": ""
-      }
-    ]
+    "text": " <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p><aside class='pull-quote'><span>In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.</span></aside><p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p><p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>"
   },
   {
     "id": 4,
@@ -58,11 +33,7 @@
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante.",
     "buttonBack": "Back",
     "buttonCTA": "More Info",
-    "content": [
-      {
-        "text": ""
-      }
-    ]
+    "text": " <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p><aside class='pull-quote-right'><span>In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.</span></aside><p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p><p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>"
   },
   {
     "id": 5,
@@ -71,10 +42,6 @@
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. .",
     "buttonBack": "Back",
     "buttonCTA": "Back to Start",
-    "content": [
-      {
-        "text": ""
-      }
-    ]
+    "text": " <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p><aside class='pull-quote'><span>In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.</span></aside><p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p><p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>"
   }
 ]

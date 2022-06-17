@@ -47,10 +47,10 @@ body {
 }
 
 .pull-quote {
-  left: -48px;
+  left: 0;
   float: left;
-  margin: 12px -12px 12px 0;
-  padding: 12px;
+  margin: 12px 12px 0 0;
+  padding: 12px 0 12px 0;
   position: relative;
   text-align: left;
   width: 240px;
@@ -60,12 +60,11 @@ body {
 
   &-right {
     @extend .pull-quote;
-    right: -48px;
+    right: 0;
     left: auto;
+    text-align: right;
     float: right;
-    margin: 12px 0 12px -12px;
-    padding: 12px;
-    position: relative;
+    margin: 12px 0 12px 12px;
 
   }
 }
