@@ -43,15 +43,18 @@ function Footer() {
 
         <div className="footer-left">
 
-          <a onClick={toggleAbout("right", true)}>ABOUT US</a>
-          <a onClick={toggleContact("right", true)}>CONTACT US</a>
-
 
         </div>
 
 
         <div className="footer-right">
-          <i className="fa-regular fa-copyright"></i> 2022 VitroMetrics Inc.
+
+
+        <a onClick={toggleAbout("right", true)}>ABOUT US</a>
+          <a onClick={toggleContact("right", true)}>CONTACT US</a>
+
+
+          <i className="fa-regular fa-copyright"></i> 2022 VitroMetrics Corp.
 
         </div>
 

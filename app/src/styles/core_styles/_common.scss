@@ -32,24 +32,54 @@ body {
 .subtle {
   cursor: pointer;
   margin: 0 0 36px 0;
-  
+
 
   h1 {
-    opacity: .3;
+    opacity: 1;
   }
 
   &:hover {
     h1 {
-    opacity: .7;
+      opacity: 1;
 
     }
   }
+}
+
+.pull-quote {
+  left: -48px;
+  float: left;
+  margin: 12px -12px 12px 0;
+  padding: 12px;
+  position: relative;
+  text-align: left;
+  width: 240px;
+  font-size: $type-lg;
+  line-height: $type-xl;
+  border-top: 6px solid $color-red-default;
+
+  &-right {
+    @extend .pull-quote;
+    right: -48px;
+    left: auto;
+    float: right;
+    margin: 12px 0 12px -12px;
+    padding: 12px;
+    position: relative;
+
+  }
+}
+
+.paragraph {
+  margin: 24px 0 24px 0 ;
+  position: relative;
 }
 
 
 .full {
   cursor: pointer;
   margin: 0 0 36px 0;
+  font-weight: $regular;
 }
 
 .divide {
@@ -59,7 +89,7 @@ body {
   margin: 6px 0 0 0;
   display: flex;
   align-self: center;
-  
+
   &-off {
     background: $color-orange-default;
     @extend .divide;
@@ -68,10 +98,18 @@ body {
 
 section {
 
-  text-align: left;
   display: flex;
+  padding: 0 12% 144px 12%;
   justify-content: center;
-  padding: 48px 84px 0 84px;
+  flex-direction: column;
+
+
+  h1 {
+    font-size: $type-h1;
+    color: $color-gray-darker;
+    font-weight: $light;
+  }
+
 
   .left {
     display: inline-flex;
@@ -94,7 +132,7 @@ section {
     }
 
   }
-  
+
   .right {
     display: flex;
     padding: 0 24px;
@@ -110,11 +148,11 @@ section {
         color: $color-gray-dark;
         padding: 6px 48px;
         border-radius: $radius-default;
-        
+
         i {
           font-size: $type-copy;
         }
-        
+
         &:hover {
           border: 1px solid $color-gray-darkest;
           color: $color-gray-darkest;
@@ -130,7 +168,7 @@ section {
       padding: 0;
       margin: 0 0 12px 0;
     }
-    
+
 
     a {
       color: $color-gray-darkest;
@@ -145,15 +183,15 @@ section {
       cursor: pointer !important;
       text-transform: uppercase;
       transition: $transition-border;
-      
+
       &:hover {
         transition: $transition-border;
         // border: 1px solid $color-gray-darkest;
       }
     }
-  
-  
-  
+
+
+
     h2 {
       font-size: $type-h1;
       color: $color-gray-darker;
@@ -167,22 +205,22 @@ section {
     li {
       padding: 0 0 12px 0;
       margin-left: 16px;
-      
+
     }
-    
-    
+
+
     ul>li {
       font-size: $type-copy;
       color: $color-gray-darker;
       list-style: circle;
-    
-  
+
+
     }
 
-  
+
   }
 
-  
+
 
 
 }
@@ -190,12 +228,14 @@ section {
 .header {
 
   display: flex;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 48px;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  padding:48px;
   opacity: 0;
+  background: $color-white-default;
+  z-index: $z-ultimate;
 
   animation: delayOpacity;
   animation-duration: .2s;
@@ -224,6 +264,7 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
+
     span {
       font-size: $type-sm;
       color: $color-red;
@@ -705,7 +746,7 @@ section {
 }
 
 .MuiBackdrop-root {
-  background: $color-white-medium !important;
+  background: $color-white-medium  !important;
 }
 
 
@@ -736,7 +777,7 @@ section {
     line-height: $type-md;
     text-transform: none;
   }
- 
+
   h2 {
     font-size: $type-h2;
     font-weight: $default;
@@ -750,29 +791,29 @@ section {
 
 
 
-  .MuiInputBase-input,
-  .MuiInput-input {
-    color: $color-gray-darkest !important;
-    font: $default $type-sm $font-default !important;
-  }
+.MuiInputBase-input,
+.MuiInput-input {
+  color: $color-gray-darkest  !important;
+  font: $default $type-sm $font-default  !important;
+}
 
 
-  .MuiInput-underline:after {
-    border-bottom: 1px solid $color-gray-dark !important;
-  }
+.MuiInput-underline:after {
+  border-bottom: 1px solid $color-gray-dark  !important;
+}
 
-  .MuiInput-underline.Mui-error:after {
-    border-bottom: 1px solid $color-gray-dark !important;
-  }
+.MuiInput-underline.Mui-error:after {
+  border-bottom: 1px solid $color-gray-dark  !important;
+}
 
-  .MuiInput-underline:before {
-    border-bottom: 1px solid $color-gray-dark !important;
-  }
+.MuiInput-underline:before {
+  border-bottom: 1px solid $color-gray-dark  !important;
+}
 
-  .MuiFormControl-root label {
-    color: $color-gray-dark !important;
-    font-size: $type-default !important;
-  }
+.MuiFormControl-root label {
+  color: $color-gray-dark  !important;
+  font-size: $type-default  !important;
+}
 
 
 
@@ -791,9 +832,8 @@ section {
 }
 
 ::placeholder {
-  color: $color-gray-darkest !important;
+  color: $color-gray-darkest  !important;
   font-weight: $default;
   padding: 0 3px;
   opacity: 1;
 }
-

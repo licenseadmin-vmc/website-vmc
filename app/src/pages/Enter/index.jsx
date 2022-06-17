@@ -14,15 +14,16 @@ function Enter() {
   const [content, setContent] = useState([])
 
   useEffect(() => {
+
+    window.scrollTo(0, 0)
+
     setLoading(false)
 
     setTimeout(() => {
-      setQuadrants(true)
-    }, 5700)
+      setSelectedQuadrant(1);
+    }, 6000)
 
-    setTimeout(() => {
-      setQuadrantLines(true)
-    }, 5300)
+
 
       ; (async function () {
         try {
@@ -30,6 +31,9 @@ function Enter() {
             `data/content.json?` + Math.floor(Math.random() * 100000)
           )
           setContent(response.data)
+
+      
+
         } catch (err) {
           console.error(err)
         }
@@ -40,7 +44,7 @@ function Enter() {
     setSelectedQuadrant(event)
   }
 
- 
+
   return (
     content.length > 0 && (
       <>
@@ -70,7 +74,7 @@ function Enter() {
                     typewriter
                       .pauseFor(4000)
                       .typeString("<h1>VitroMetrics</h1>")
-                      .typeString("<h4>Your <strong>IVDR</strong> Experts</h4>")
+                      .typeString("<h4>Your <strong>IVDR</strong> Solution</h4>")
                       .start()
                   }}
                 />
@@ -97,450 +101,148 @@ function Enter() {
               </div>
             </div>
 
+            {selectedQuadrant == 0 && (
 
-            <div className='flex-container'>
+              <div className='flex-container'>
 
+                <div className='follow'>
+                  {selectedQuadrant == 0 && (
+                    <>
+                      <Typewriter
+                        options={{
+                          autoStart: true,
+                          loop: false,
+                          cursor: '',
+                          delay: 12
+                        }}
+                        onInit={typewriter => {
+                          typewriter
+                            .pauseFor(200)
+                            .typeString('<h1>' + content[0].title + '</h1>')
+                            .pauseFor(400)
+                            .typeString('<h4>' + content[0].subtitle + '</h4>')
+                            .pauseFor(1000)
+                            .deleteAll(1)
+                            .pasteString(
+                              "<h2>" +
+                              content[0].line1 +
+                              '</h2>'
+                            )
+                            .pauseFor(750)
+                            .pasteString("<div class='nudge-md'></div>")
+                            .pasteString(
+                              "<h2 class='pulse-turbo'>" +
+                              content[0].line2 +
+                              '</h2>'
+                            )
+                            .pauseFor(2000)
+                            .deleteAll(1)
+                            .start()
+                        }}
+                      />
 
-
-
-              <div className='follow'>
-                {selectedQuadrant == 0 && (
-                  <>
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 12
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pauseFor(200)
-                          .typeString('<h1>' + content[0].title + '</h1>')
-                          .pauseFor(400)
-                          .typeString('<h4>' + content[0].subtitle + '</h4>')
-                          .pauseFor(1000)
-                          .deleteAll(1)
-                          .pasteString(
-                            "<h2>" +
-                            content[0].line1 +
-                            '</h2>'
-                          )
-                          .pauseFor(750)
-                          .pasteString("<div class='nudge-md'></div>")
-                          .pasteString(
-                            "<h2 class='pulse-turbo'>" +
-                            content[0].line2 +
-                            '</h2>'
-                          )
-                          .pauseFor(2000)
-                          .deleteAll(1)
-                          .start()
-                      }}
-                    />
-
-                  </>
-                )}
-              </div>
-
-
-              <div className='row'>
-                <div className={`flex-item-q` + selectedQuadrant}>
-                  <img
-                    className='zoom-out'
-                    style={{
-                      cursor: selectedQuadrant !== 0 ? 'pointer' : 'default'
-                    }}
-                    onClick={() => handleQuadrant(0)}
-                    src='img/logo-vm.png'
-                    height='72'
-                  />{' '}
-                  <div className='nudge-md'></div>
+                    </>
+                  )}
                 </div>
+
+
+                <div className='row'>
+                  <div className={`flex-item-q` + selectedQuadrant}>
+                    <img
+                      className='zoom-out'
+                      style={{
+                        cursor: selectedQuadrant !== 0 ? 'pointer' : 'default'
+                      }}
+                      onClick={() => handleQuadrant(0)}
+                      src='img/logo-vm.png'
+                      height='72'
+                    />{' '}
+                    <div className='nudge-md'></div>
+                  </div>
+                </div>
+
+
+
               </div>
+            )}
+
+
+            {selectedQuadrant == 1 && (
+
+              <section>
 
 
 
-            </div>
+                  <div className='paragraph'>
+                    <h1>THE PROBLEM</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
 
-            <div style={{ position: "absolute", top: "204px" }}>
+                    <aside className='pull-quote'>
+                      <span>
+                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
+                      </span>
+                    </aside>
 
-              {selectedQuadrant == 0 && (
-                <section>
-                  <div className='left'>
 
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pauseFor(6200)
-                          .typeString("<div class='full'><h1>" + content[1].title + "</h1><div class='divide'></div></div>")
-                          .start()
-                      }}
-                    />
-                    <div className="subtle fade-in-delay-6s">
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1>
-                    </div>
-                    <div className="subtle fade-in-delay-6s">
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1>
-                    </div>
-                    <div className="subtle fade-in-delay-6s">
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1>
-                    </div>
-                    <div className="subtle fade-in-delay-6s">
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1>
-                    </div>
+                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
+
+                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
 
                   </div>
 
-                  <div className='right'>
+
+                  <div className='paragraph'>
+                    <h1>Section Two</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
+
+                    <aside className='pull-quote-right'>
+                      <span>
+                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
+                      </span>
+                    </aside>
 
 
+                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
 
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pauseFor(6200)
-                          .pasteString("<p>" + content[1].abstract + "</p>")
-                          .pasteString("<p>" + content[1].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-                    <div className='links'>
-                      <a className="fade-in-delay-6s" onClick={() => handleQuadrant(2)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
-
+                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
                   </div>
-                </section>
-              )}
+                 
+                  <div className='paragraph'>
+                    <h1>Section Three</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
 
-              {selectedQuadrant == 1 && (
-                <section>
-                  <div className='left'>
+                    <aside className='pull-quote'>
+                      <span>
+                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
+                      </span>
+                    </aside>
 
-                    <div className='full'>
-                      <h1 onClick={() => handleQuadrant(1)}>
-                        {content[1].title}
-                      </h1><div className='divide'></div>
-                    </div>
 
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1>
-                    </div>
+                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
 
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1>
-                    </div>
-
+                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
                   </div>
-                  <div className='right'>
+                  
+                  <div className='paragraph'>
+                    <h1>Section Four</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat non lectus imperdiet semper. Suspendisse posuere metus ultrices lacus tempor viverra. Nulla posuere dignissim tellus, ut luctus nibh vehicula ac. In venenatis dignissim odio in suscipit. Sed ac massa et ex faucibus sodales. Duis convallis ligula ut nunc ullamcorper, at dictum dui euismod. Nunc porta metus ut dui suscipit egestas.</p>
+
+                    <aside className='pull-quote-right'>
+                      <span>
+                        In gravida at lacus eget molestie. Nunc porttitor nisi in tellus tempus, nec pulvinar tortor interdum.
+                      </span>
+                    </aside>
 
 
+                    <p>Vestibulum dapibus, mi id mollis imperdiet, leo dui varius felis, ac malesuada lacus odio et tellus. Ut ac eros congue, imperdiet urna pellentesque, sagittis neque. Quisque pretium mattis dui vitae dictum. Duis feugiat risus sed leo efficitur, a lacinia ipsum posuere. Mauris lacinia consectetur tempor. Etiam pellentesque maximus urna non porttitor. Vivamus sagittis nec lorem ut mattis. Integer eget mauris sed lectus rutrum euismod sit amet nec tortor. Phasellus bibendum augue in euismod auctor. Ut non pretium odio. Sed finibus pretium justo, ut fermentum elit sagittis a.</p>
 
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pasteString("<p>" + content[1].abstract + "</p>")
-                          .pasteString("<p>" + content[1].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(2)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
-                  </div>
-                </section>
-              )}
-
-              {selectedQuadrant == 2 && (
-                <section>
-                  <div className='left'>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(1)}>
-                        {content[1].title}
-                      </h1>
-                    </div>
-
-                    <div className='full'>
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1><div className='divide'></div>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1>
-                    </div>
-
-
-                  </div>
-                  <div className='right'>
-
-
-
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pasteString("<p>" + content[2].abstract + "</p>")
-                          .pasteString("<p>" + content[2].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(3)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
+                    <p>Pellentesque fermentum cursus finibus. In ac faucibus ligula. Suspendisse potenti. Phasellus ac fringilla sem. In ut dolor eget nunc suscipit pharetra et at ante. Nulla mattis sollicitudin neque, id egestas lorem mattis sit amet. Aenean molestie justo ac porttitor malesuada. Quisque et est a mauris volutpat pretium. Pellentesque a lectus at nisl laoreet molestie. Fusce eget nibh eu tortor tempus fringilla in ac ligula. Mauris mollis odio nunc, in cursus urna convallis quis. Proin turpis nisi, hendrerit quis urna id, efficitur molestie augue. Etiam aliquam odio ac diam blandit commodo.</p>
                   </div>
 
-                </section>
-              )}
-              {selectedQuadrant == 3 && (
-                <section className='section'>
-                  <div className='left'>
 
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(1)}>
-                        {content[1].title}
-                      </h1>
-                    </div>
+              </section>
 
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1>
-                    </div>
-                    <div className='full'>
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1><div className='divide'></div>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1>
-                    </div>
-                  </div>
-                  <div className='right'>
-
-
-
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pasteString("<p>" + content[3].abstract + "</p>")
-                          .pasteString("<p>" + content[3].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(4)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
-
-                  </div>
-                </section>
-              )}
-              {selectedQuadrant == 4 && (
-                <section className='section'>
-                  <div className='left'>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(1)}>
-                        {content[1].title}
-                      </h1>
-                    </div>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1>
-                    </div>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1>
-                    </div>
-                    <div className='full'>
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1><div className='divide'></div>
-                    </div>
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1>
-                    </div>
-
-                  </div>
-                  <div className='right'>
-
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pasteString("<p>" + content[4].abstract + "</p>")
-                          .pasteString("<p>" + content[4].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-                    <div className='links'>
-                      <a onClick={() => handleQuadrant(5)}>
-                        <i className="fa-light fa-arrow-right"></i>
-                      </a>
-                    </div>
-
-                  </div>
-                </section>
-              )}
-              {selectedQuadrant == 5 && (
-                <section className='section'>
-                  <div className='left'>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(1)}>
-                        {content[1].title}
-                      </h1>
-                    </div>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(2)}>
-                        {content[2].title}
-                      </h1>
-                    </div>
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(3)}>
-                        {content[3].title}
-                      </h1>
-                    </div>
-
-
-                    <div className='subtle'>
-                      <h1 onClick={() => handleQuadrant(4)}>
-                        {content[4].title}
-                      </h1>
-                    </div>
-
-                    <div className='full'>
-                      <h1 onClick={() => handleQuadrant(5)}>
-                        {content[5].title}
-                      </h1><div className='divide'></div>
-                    </div>
-
-
-                  </div>
-                  <div className='right'>
-                    <Typewriter
-                      options={{
-                        autoStart: true,
-                        loop: false,
-                        cursor: '',
-                        delay: 0
-                      }}
-                      onInit={typewriter => {
-                        typewriter
-                          .pasteString("<p>" + content[5].abstract + "</p>")
-                          .pasteString("<p>" + content[5].body + "</p>")
-                          .start()
-                      }}
-                    />
-
-                  </div>
-                </section>
-              )}
-              <div className="nudge-xxl"></div>
-            </div>
-
+            )}
 
 
             <Footer />
@@ -549,7 +251,7 @@ function Enter() {
 
 
 
-      
+
       </>
     )
   )

@@ -4,46 +4,77 @@
     "title": "Your IVDR Solution",
     "subtitle": "powered by <strong>VitroMetrics</strong>",
     "line1": "As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect.",
-    "line2":"<strong>VitroMetrics has your complete solution.</strong>"
+    "line2": "<strong>VitroMetrics has your complete solution.</strong>"
   },
   {
     "id": 1,
     "title": "The Problem",
-    "abstract": "<b>Blah Blah Blah</b>",
+    "abstract": "<h1>Blah Blah Blah</h1>",
     "body": "Pellentesque id arcu in ligula porttitor dictum sed et tellus. Phasellus condimentum, ligula at dignissim iaculis, augue ex suscipit nulla, sed egestas dui quam sed leo. Sed efficitur rhoncus dui, nec laoreet lorem venenatis et. Sed dapibus, felis sed posuere vehicula, neque lacus condimentum nulla, in pretium diam ipsum vel lectus. Nullam sed sapien nec erat bibendum gravida at eget augue. Cras eget feugiat ligula, id sollicitudin lorem. Cras feugiat ullamcorper ullamcorper.",
-    "buttonBack":"Back",
-    "buttonCTA":"Our Solution"
+    "buttonBack": "Back",
+    "buttonCTA": "Our Solution",
+    "content": [
+      {
+        "text": "Blah blah blah"
+      },
+      {
+        "text": "quote blah"
+      },
+      {
+        "text": "blah blah"
+      }
+    ]
   },
   {
     "id": 2,
     "title": "VitroMetrics Compliance",
     "abstract": "IVDR enacted May 26, 2022<br />Requirement for post-market surveyance of all IVD",
     "body": "<ul><li>After the IVDR was enacted on May 26, 2022 all IVD manufacturers have been required to provide post-market surveyance of their devices</li><li>Evidence comes from disparate sources that are difficult to acquire and manage</li><li>Recurring verified testing evidence is readily available to manufacturers</li></ul>",
-    "buttonBack":"Back",
-    "buttonCTA":"More Info"
+    "buttonBack": "Back",
+    "buttonCTA": "More Info",
+    "content": [
+      {
+        "text": ""
+      }
+    ]
   },
   {
     "id": 3,
     "title": "VitroMetrics Audience",
     "abstract": "IVD is a USD 117B market, which will grow to 128B by 2028<br />Compliance cost estimated at USD 3.5B – 3% of revenues<br />Compliance market estimated at USD 900M<br />EQA (External Quality Assessment) data is fit for purpose",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    "buttonBack":"Back",
-    "buttonCTA":"More Info"
+    "buttonBack": "Back",
+    "buttonCTA": "More Info",
+    "content": [
+      {
+        "text": ""
+      }
+    ]
   },
   {
     "id": 4,
     "title": "VitroMetrics Advantage",
     "abstract": "30 years of regulatory experience<br />20 years of EQA data",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque enim dui, volutpat vel placerat aliquam, finibus eu felis. Nullam mattis, dolor eget pellentesque aliquet, dui metus venenatis metus, ac pharetra magna nisi ut ante.",
-    "buttonBack":"Back",
-    "buttonCTA":"More Info"
+    "buttonBack": "Back",
+    "buttonCTA": "More Info",
+    "content": [
+      {
+        "text": ""
+      }
+    ]
   },
   {
-    "id":5,
+    "id": 5,
     "title": "VitroMetrics Solution",
     "abstract": "AI analytics applied to big data<br />Mutliple facets of data collected<br />Multiple compliance regions satified with single solution",
     "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac magna sed libero gravida placerat iaculis accumsan urna. Vestibulum rutrum quis nisi id gravida. Aenean gravida nisi scelerisque molestie interdum. Sed posuere placerat tortor vel varius. .",
-    "buttonBack":"Back",
-    "buttonCTA":"Back to Start"
+    "buttonBack": "Back",
+    "buttonCTA": "Back to Start",
+    "content": [
+      {
+        "text": ""
+      }
+    ]
   }
 ]
