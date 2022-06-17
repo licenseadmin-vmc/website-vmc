@@ -49,14 +49,14 @@ body {
 .pull-quote {
   left: 0;
   float: left;
-  margin: 12px 12px 0 0;
-  padding: 12px 0 12px 0;
+  margin: 12px 24px 12px 0;
   position: relative;
   text-align: left;
   width: 240px;
   font-size: $type-lg;
   line-height: $type-xl;
   border-top: 6px solid $color-red-default;
+  padding: 12px;
 
   &-right {
     @extend .pull-quote;
@@ -64,13 +64,14 @@ body {
     left: auto;
     text-align: right;
     float: right;
-    margin: 12px 0 12px 12px;
+    margin: 12px 0 12px 24px;
+
 
   }
 }
 
 .paragraph {
-  margin: 24px 0 24px 0 ;
+  margin: 24px 0 24px 0;
   position: relative;
 }
 
@@ -231,7 +232,7 @@ section {
   // top: 0;
   // left: 0;
   // right: 0;
-  padding:48px;
+  padding: 48px;
   opacity: 0;
   background: $color-white-default;
   z-index: $z-ultimate;
@@ -264,10 +265,6 @@ section {
     align-items: center;
     justify-content: flex-start;
 
-    span {
-      font-size: $type-sm;
-      color: $color-red;
-    }
   }
 }
 

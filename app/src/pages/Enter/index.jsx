@@ -91,19 +91,7 @@ function Enter() {
 
               <div className='header-right'>
 
-                <Typewriter
-                  options={{
-                    autoStart: true,
-                    loop: false,
-                    cursor: '',
-                    delay: 25
-                  }}
-                  onInit={typewriter => {
-                    typewriter
-                      .typeString("As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect. <strong>VitroMetrics has your complete solution.</strong>")
-                      .start()
-                  }}
-                />
+              <h3>As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect. <strong>VitroMetrics has your complete solution.</strong></h3>
 
               </div>
             </div>
