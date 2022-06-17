@@ -91,7 +91,7 @@ function Enter() {
 
               <div className='header-right'>
 
-              <h3>As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect. <strong>VitroMetrics has your complete solution.</strong></h3>
+                <h3>As of May 26th 2022, <strong> In Vitro Diagnostics Regulation </strong> is in effect. <strong>VitroMetrics has your complete solution.</strong></h3>
 
               </div>
             </div>
@@ -162,27 +162,332 @@ function Enter() {
             )}
 
 
-            {selectedQuadrant == 1 && (
-
+            {/* {selectedQuadrant == 0 && (
               <section>
+                <div className='left'>
 
-                {content && content.map((item, index) => (
-                  <div className="paragraph" key={index}>
-                    <h1>{item.title}</h1>
+                  <Typewriter
+                    options={{
+                      autoStart: true,
+                      loop: false,
+                      cursor: '',
+                      delay: 0
+                    }}
+                    onInit={typewriter => {
+                      typewriter
+                        .pauseFor(6200)
+                        .typeString("<div class='full'><h1>" + content[0].title + "</h1><div class='divide'></div></div>")
+                        .start()
+                    }}
+                  />
+                  <div className="subtle fade-in-delay-6s">
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[1].title}
+                    </h1>
+                  </div>
+                  <div className="subtle fade-in-delay-6s">
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[2].title}
+                    </h1>
+                  </div>
+                  <div className="subtle fade-in-delay-6s">
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[3].title}
+                    </h1>
+                  </div>
+                  <div className="subtle fade-in-delay-6s">
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[4].title}
+                    </h1>
+                  </div>
+
+                </div>
+
+                <div className='right'>
+
+
+
+                  <Typewriter
+                    options={{
+                      autoStart: true,
+                      loop: false,
+                      cursor: '',
+                      delay: 0
+                    }}
+                    onInit={typewriter => {
+                      typewriter
+                        .pauseFor(6200)
+                        .pasteString("<p>" + content[1].abstract + "</p>")
+                        .pasteString("<p>" + content[1].body + "</p>")
+                        .start()
+                    }}
+                  />
+
+                  <div className='links'>
+                    <a className="fade-in-delay-6s" onClick={() => handleQuadrant(1)}>
+                      <i className="fa-light fa-arrow-right"></i>
+                    </a>
+                  </div>
+
+
+                </div>
+              </section>
+            )} */}
+
+            {selectedQuadrant == 1 && (
+              <section>
+                <div className='left'>
+
+                  <div className='full'>
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[0].title}
+                    </h1><div className='divide'></div>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[1].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[2].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[3].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(5)}>
+                      {content[4].title}
+                    </h1>
+                  </div>
+
+                </div>
+                <div className='right'>
+
+                  <div className="paragraph">
+                    <h1>{content[0].title}</h1>
 
                     <span
                       dangerouslySetInnerHTML={{
-                        __html: item.text
+                        __html: content[0].text
                       }}
                     />
                   </div>
 
-                ))}
 
-
+                </div>
               </section>
-
             )}
+            
+            {selectedQuadrant == 2 && (
+              <section>
+                <div className='left'>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[0].title}
+                    </h1>
+                  </div>
+
+                  <div className='full'>
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[1].title}
+                    </h1><div className='divide'></div>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[2].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[3].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(5)}>
+                      {content[4].title}
+                    </h1>
+                  </div>
+
+                </div>
+                <div className='right'>
+
+                  <div className="paragraph">
+                    <h1>{content[1].title}</h1>
+
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: content[1].text
+                      }}
+                    />
+                  </div>
+
+
+                </div>
+              </section>
+            )}
+            
+            {selectedQuadrant == 3 && (
+              <section>
+                <div className='left'>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[0].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[1].title}
+                    </h1>
+                  </div>
+
+                  <div className='full'>
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[2].title}
+                    </h1><div className='divide'></div>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[3].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(5)}>
+                      {content[4].title}
+                    </h1>
+                  </div>
+
+                </div>
+                <div className='right'>
+
+                  <div className="paragraph">
+                    <h1>{content[2].title}</h1>
+
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: content[2].text
+                      }}
+                    />
+                  </div>
+
+
+                </div>
+              </section>
+            )}
+            
+            {selectedQuadrant == 4 && (
+              <section>
+                <div className='left'>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[0].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[1].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[2].title}
+                    </h1>
+                  </div>
+                  <div className='full'>
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[3].title}
+                    </h1><div className='divide'></div>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(5)}>
+                      {content[4].title}
+                    </h1>
+                  </div>
+
+                </div>
+                <div className='right'>
+
+                  <div className="paragraph">
+                    <h1>{content[3].title}</h1>
+
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: content[3].text
+                      }}
+                    />
+                  </div>
+
+
+                </div>
+              </section>
+            )}
+         
+            {selectedQuadrant == 5 && (
+              <section>
+                <div className='left'>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(1)}>
+                      {content[0].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(2)}>
+                      {content[1].title}
+                    </h1>
+                  </div>
+
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(3)}>
+                      {content[2].title}
+                    </h1>
+                  </div>
+                  <div className='subtle'>
+                    <h1 onClick={() => handleQuadrant(4)}>
+                      {content[3].title}
+                    </h1>
+                  </div>
+                  <div className='full'>
+                    <h1 onClick={() => handleQuadrant(5)}>
+                      {content[4].title}
+                    </h1><div className='divide'></div>
+                  </div>
+
+                </div>
+                <div className='right'>
+
+                  <div className="paragraph">
+                    <h1>{content[4].title}</h1>
+
+                    <span
+                      dangerouslySetInnerHTML={{
+                        __html: content[4].text
+                      }}
+                    />
+                  </div>
+
+
+                </div>
+              </section>
+            )}
+
+           
+
+
+
 
 
             <Footer />
