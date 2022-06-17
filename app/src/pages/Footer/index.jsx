@@ -50,7 +50,7 @@ function Footer() {
         <div className="footer-right">
 
 
-        <a onClick={toggleAbout("right", true)}>ABOUT US</a>
+          <a onClick={toggleAbout("right", true)}>ABOUT US</a>
           <a onClick={toggleContact("right", true)}>CONTACT US</a>
 
 
@@ -89,9 +89,10 @@ function Footer() {
 
         <p>Ut eget cursus tortor, vitae tincidunt elit. Suspendisse potenti. Donec consequat malesuada tortor, a ultrices neque consequat in. Nam id lacinia purus.</p>
 
+        <div className="nudge-sm"></div>
         <TextField
           label="Name"
-          autoComplete='off'
+          autoComplete='nope'
           spellCheck='false'
           name='Name'
           id='Name'
@@ -100,10 +101,11 @@ function Footer() {
         // error={!!formErrors.orgName}
         // required={formData.userStatus === 'new'}
         />
+        <div className="nudge-sm"></div>
 
         <TextField
           label="Email "
-          autoComplete='off'
+          autoComplete='nope'
           spellCheck='false'
           name='Name'
           id='Name'
@@ -112,9 +114,10 @@ function Footer() {
         // error={!!formErrors.orgName}
         // required={formData.userStatus === 'new'}
         />
+        <div className="nudge-sm"></div>
         <TextField
           label="Which testing disciplines"
-          autoComplete='off'
+          autoComplete='nope'
           spellCheck='false'
           name='Name'
           id='Name'
@@ -123,9 +126,10 @@ function Footer() {
         // error={!!formErrors.orgName}
         // required={formData.userStatus === 'new'}
         />
+          <div className="nudge-sm"></div>
         <TextField
           label="Which regulatory markets besides EU"
-          autoComplete='off'
+          autoComplete='nope'
           spellCheck='false'
           name='Name'
           id='Name'
@@ -137,7 +141,7 @@ function Footer() {
 
         <div className="nudge-lg"></div>
 
-          <a className="link-default" onClick={toggleContact("right", false)}>SUBMIT</a>
+        <a className="link-default" onClick={toggleContact("right", false)}>SUBMIT</a>
 
 
 
